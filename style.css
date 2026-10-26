@@ -1,0 +1,28 @@
+
+/* Webart.io Website Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080d1f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #38bdf8;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.6;
+}
