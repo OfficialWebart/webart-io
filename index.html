@@ -11,499 +11,393 @@
 <script src="script.js" defer></script>
 
 <style>
-/* ABOUT SECTION */
-.about-premium {
-  max-width: 1350px;
-  margin: 50px auto 100px;
-  padding: 65px 6%;
-  scroll-margin-top: 35px;
+/* ABOUT */
+.about-premium,.services-premium,.projects-premium,.contact-premium {
+  max-width:1350px;
+  margin:0 auto 90px;
+  padding:65px 5%;
+  scroll-margin-top:35px;
 }
-.about-heading {
-  text-align: center;
-  margin-bottom: 40px;
+.about-heading,.services-heading,.projects-heading,.contact-heading {
+  text-align:center;
+  margin-bottom:42px;
 }
-.about-heading h2 {
-  margin-top: 15px;
-  font-size: clamp(34px,5vw,58px);
+.about-heading h2,.services-heading h2,.projects-heading h2,.contact-heading h2 {
+  margin:15px 0;
+  font-size:clamp(34px,5vw,58px);
+  letter-spacing:-1.5px;
 }
-.about-heading h2 span,
-.services-heading h2 span,
-.projects-heading h2 span {
-  background: linear-gradient(110deg,#00c6ff,#a64cff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.about-heading h2 span,.services-heading h2 span,
+.projects-heading h2 span,.contact-heading h2 span {
+  background:linear-gradient(110deg,#00c6ff,#a64cff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.services-heading p,.projects-heading p,.contact-heading p {
+  max-width:650px;
+  margin:auto;
+  color:#aab8d4;
+  line-height:1.8;
 }
 .about-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 25px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:25px;
 }
 .about-glass,.about-visual,.founder-card {
-  border: 1px solid #4775c266;
-  border-radius: 26px;
-  background: linear-gradient(145deg,#122852aa,#080e29dd);
-  box-shadow: inset 0 1px #ffffff20,0 20px 45px #0004;
+  border:1px solid #4775c266;
+  border-radius:26px;
+  background:linear-gradient(145deg,#122852aa,#080e29dd);
+  box-shadow:inset 0 1px #ffffff20,0 20px 45px #0004;
 }
-.about-glass { padding: 40px; }
-.about-glass h3 { font-size: 30px; margin-bottom: 20px; }
-.about-glass h3 span { color: #00b7ff; }
-.about-glass p {
-  color: #aab8d4;
-  line-height: 1.9;
-  margin-bottom: 15px;
-}
-.about-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 25px;
-}
-.about-tags span {
-  padding: 10px 15px;
-  border: 1px solid #315caa;
-  border-radius: 30px;
-  color: #9cceff;
-  font-size: 12px;
+.about-glass {padding:40px}
+.about-glass h3 {font-size:30px;margin-bottom:20px}
+.about-glass h3 span {color:#00b7ff}
+.about-glass p {color:#aab8d4;line-height:1.9;margin-bottom:15px}
+.about-tags,.project-tech {display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.about-tags span,.project-tech span {
+  padding:10px 14px;
+  border:1px solid #315caa;
+  border-radius:25px;
+  color:#9cceff;
+  font-size:12px;
 }
 .about-visual {
-  min-height: 340px;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle,#243c98aa,transparent 70%),#080d25;
-  perspective: 800px;
+  min-height:340px;
+  display:grid;
+  place-items:center;
+  background:radial-gradient(circle,#243c98aa,transparent 70%),#080d25;
+  perspective:800px;
 }
 .about-cube {
-  width: 155px;
-  height: 155px;
-  display: grid;
-  place-items: center;
-  border: 2px solid #479bff;
-  border-radius: 30px;
-  background: linear-gradient(135deg,#006dff,#752bdf);
-  box-shadow: 20px 20px #14125b,0 0 60px #187bff88;
-  transform: rotate(-12deg) rotateY(-15deg);
-  animation: aboutFloat 5s ease-in-out infinite;
+  width:155px;height:155px;
+  display:grid;place-items:center;
+  border:2px solid #479bff;
+  border-radius:30px;
+  background:linear-gradient(135deg,#006dff,#752bdf);
+  box-shadow:20px 20px #14125b,0 0 60px #187bff88;
+  transform:rotate(-12deg) rotateY(-15deg);
+  animation:aboutFloat 5s ease-in-out infinite;
 }
-.about-cube span {
-  font-size: 95px;
-  font-weight: 900;
-  font-style: italic;
-}
+.about-cube span {font-size:95px;font-weight:900;font-style:italic}
 @keyframes aboutFloat {
-  50% { transform: translateY(-15px) rotate(-7deg) rotateY(-8deg); }
+  50% {transform:translateY(-15px) rotate(-7deg) rotateY(-8deg)}
 }
-.founders-heading {
-  text-align: center;
-  margin: 65px 0 25px;
-  font-size: 27px;
-}
+.founders-heading {text-align:center;margin:65px 0 25px;font-size:27px}
 .founders-grid {
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
+  max-width:900px;margin:auto;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
 }
-.founder-card { text-align: center; padding: 30px; }
+.founder-card {text-align:center;padding:30px}
 .founder-avatar {
-  display: grid;
-  place-items: center;
-  width: 68px;
-  height: 68px;
-  margin: 0 auto 18px;
-  border-radius: 18px;
-  background: linear-gradient(135deg,#00aaff,#913cff);
-  font-size: 25px;
-  font-weight: 800;
+  display:grid;place-items:center;
+  width:68px;height:68px;margin:0 auto 18px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#00aaff,#913cff);
+  font-size:25px;font-weight:800;
 }
-.founder-card h4 { margin-bottom: 10px; font-size: 20px; }
-.founder-card p {
-  color: #8fc8ff;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
+.founder-card h4 {font-size:20px;margin-bottom:10px}
+.founder-card p {color:#8fc8ff;font-size:12px;letter-spacing:1px}
 
-/* SERVICES SECTION */
-.services-premium {
-  max-width: 1350px;
-  margin: 0 auto 100px;
-  padding: 65px 5%;
-  position: relative;
-  scroll-margin-top: 35px;
-}
-.services-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-.services-heading h2 {
-  margin: 16px 0;
-  font-size: clamp(36px,5vw,56px);
-  letter-spacing: -2px;
-}
-.services-heading p {
-  max-width: 650px;
-  margin: auto;
-  color: #aab8d4;
-  line-height: 1.8;
-}
+/* SERVICES */
 .premium-services-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 22px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
 }
 .premium-service-card {
-  position: relative;
-  min-height: 300px;
-  padding: 32px;
-  border-radius: 25px;
-  border: 1px solid #3868ad88;
-  background: linear-gradient(145deg,#102450ee,#080e27ee);
-  box-shadow: inset 0 1px #ffffff20,0 20px 35px #0004;
-  overflow: hidden;
-  transition: transform .4s,box-shadow .4s,border-color .4s;
+  position:relative;
+  min-height:300px;
+  padding:32px;
+  border:1px solid #3868ad88;
+  border-radius:25px;
+  background:linear-gradient(145deg,#102450ee,#080e27ee);
+  box-shadow:inset 0 1px #ffffff20,0 20px 35px #0004;
+  transition:transform .4s,border-color .4s,box-shadow .4s;
 }
 .premium-service-card:hover {
-  transform: translateY(-12px) perspective(800px) rotateX(4deg);
-  border-color: #00b7ff;
-  box-shadow: 0 20px 50px #007bff33,0 0 25px #913cff22;
+  transform:translateY(-10px);
+  border-color:#00b7ff;
+  box-shadow:0 20px 50px #007bff33;
 }
 .service-number {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 12px;
-  color: #6489c2;
-  font-weight: 800;
+  position:absolute;right:30px;top:30px;
+  color:#6489c2;font-size:12px;font-weight:800;
 }
 .premium-service-icon {
-  width: 65px;
-  height: 65px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 30px;
-  border-radius: 19px;
-  font-size: 30px;
-  color: #62d5ff;
-  background: linear-gradient(135deg,#123e83,#102052);
-  border: 1px solid #238aff77;
-  box-shadow: 0 0 25px #007bff33;
+  width:65px;height:65px;
+  display:grid;place-items:center;
+  margin-bottom:30px;
+  border:1px solid #238aff77;
+  border-radius:19px;
+  background:linear-gradient(135deg,#123e83,#102052);
+  color:#62d5ff;font-size:30px;
+  box-shadow:0 0 25px #007bff33;
 }
 .premium-service-card:nth-child(even) .premium-service-icon {
-  color: #c09aff;
-  background: linear-gradient(135deg,#432182,#191147);
-  border-color: #913cff77;
+  color:#c09aff;
+  background:linear-gradient(135deg,#432182,#191147);
 }
-.premium-service-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
+.premium-service-card h3 {font-size:22px;margin-bottom:15px}
 .premium-service-card p {
-  font-size: 14px;
-  color: #aab8d4;
-  line-height: 1.8;
-  padding-bottom: 35px;
+  color:#aab8d4;font-size:14px;line-height:1.8;padding-bottom:35px;
 }
 .service-arrow {
-  position: absolute;
-  bottom: 28px;
-  right: 30px;
-  font-size: 26px;
-  color: #00b7ff;
-  transition: transform .3s;
-}
-.premium-service-card:hover .service-arrow {
-  transform: translate(4px,-4px);
+  position:absolute;right:30px;bottom:28px;
+  color:#00b7ff;font-size:26px;
 }
 
-/* STEP 19 — PREMIUM PROJECT SHOWCASE */
-.projects-premium {
-  position: relative;
-  max-width: 1350px;
-  margin: 0 auto 110px;
-  padding: 70px 5%;
-  scroll-margin-top: 35px;
-}
-.projects-premium::before {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  left: -80px;
-  top: 100px;
-  border-radius: 50%;
-  background: #075dff;
-  filter: blur(110px);
-  opacity: .16;
-  pointer-events: none;
-}
-.projects-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-.projects-heading h2 {
-  margin: 15px 0;
-  font-size: clamp(36px,5vw,58px);
-  letter-spacing: -2px;
-}
-.projects-heading p {
-  max-width: 650px;
-  margin: auto;
-  color: #aab8d4;
-  line-height: 1.8;
-}
+/* PROJECT SHOWCASE */
 .project-showcase {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 45px;
-  padding: 45px;
-  border: 1px solid #396cbb99;
-  border-radius: 32px;
-  background: linear-gradient(135deg,#112654ee,#080e29f5);
-  box-shadow:
-    0 30px 65px #0005,
-    inset 0 1px #ffffff25,
-    0 0 45px #176aff12;
-  overflow: hidden;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  align-items:center;
+  gap:45px;
+  padding:45px;
+  border:1px solid #396cbb99;
+  border-radius:32px;
+  background:linear-gradient(135deg,#112654ee,#080e29f5);
+  box-shadow:0 30px 65px #0005,inset 0 1px #ffffff25;
 }
-.project-showcase::after {
-  content: "";
-  position: absolute;
-  width: 230px;
-  height: 230px;
-  right: -110px;
-  bottom: -120px;
-  background: #873bff;
-  filter: blur(85px);
-  opacity: .25;
-  pointer-events: none;
-}
-.project-preview-wrap {
-  position: relative;
-  min-width: 0;
-  perspective: 1000px;
-  padding: 15px 12px 28px 0;
-}
+.project-preview-wrap {min-width:0;perspective:1000px;padding:12px}
 .project-browser {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #5278c5;
-  border-radius: 16px;
-  background: #08102b;
-  box-shadow:
-    16px 20px 0 #081437,
-    0 25px 55px #0007,
-    0 0 40px #188bff25;
-  transform: rotateY(-7deg) rotateX(3deg);
-  transition: transform .45s,box-shadow .45s;
+  overflow:hidden;
+  border:1px solid #5278c5;
+  border-radius:16px;
+  background:#08102b;
+  box-shadow:16px 20px #081437,0 25px 55px #0007;
+  transform:rotateY(-7deg) rotateX(3deg);
+  transition:transform .4s;
 }
-.project-showcase:hover .project-browser {
-  transform: rotateY(0) rotateX(0) translateY(-6px);
-  box-shadow: 0 30px 65px #0008,0 0 45px #168bff33;
-}
+.project-showcase:hover .project-browser {transform:translateY(-5px)}
 .browser-top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 13px;
-  background: #142249;
-  border-bottom: 1px solid #4267a477;
+  display:flex;align-items:center;gap:12px;
+  padding:13px;background:#142249;
 }
-.browser-dots {
-  display: flex;
-  gap: 5px;
-}
+.browser-dots {display:flex;gap:5px}
 .browser-dots i {
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ff6977;
+  width:8px;height:8px;border-radius:50%;background:#ff6977;
 }
-.browser-dots i:nth-child(2) { background: #ffca65; }
-.browser-dots i:nth-child(3) { background: #55d9a0; }
+.browser-dots i:nth-child(2) {background:#ffca65}
+.browser-dots i:nth-child(3) {background:#55d9a0}
 .browser-address {
-  flex: 1;
-  min-width: 0;
-  padding: 7px 12px;
-  border-radius: 6px;
-  background: #08132e;
-  color: #8fa9d3;
-  font-size: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  flex:1;min-width:0;padding:7px 12px;
+  border-radius:6px;background:#08132e;
+  color:#8fa9d3;font-size:10px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
 .preview-content {
-  min-height: 290px;
-  padding: 25px;
-  background:
-    radial-gradient(circle at 75% 15%,#266dba55,transparent 50%),
-    linear-gradient(145deg,#101e43,#060b20);
+  min-height:290px;padding:25px;
+  background:radial-gradient(circle at 75% 15%,#266dba55,transparent 50%),#08102b;
 }
 .preview-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 35px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;padding-bottom:35px;
 }
-.preview-brand {
-  font-size: 13px;
-  font-weight: 800;
-  color: white;
-}
-.preview-nav-lines {
-  display: flex;
-  gap: 7px;
-}
+.preview-brand {font-size:12px;font-weight:800;color:white}
+.preview-nav-lines {display:flex;gap:7px}
 .preview-nav-lines i {
-  display: block;
-  width: 22px;
-  height: 4px;
-  border-radius: 4px;
-  background: #4771b0;
+  width:22px;height:4px;border-radius:4px;background:#4771b0;
 }
 .preview-hero-label {
-  display: inline-block;
-  padding: 7px 10px;
-  border: 1px solid #347dc688;
-  border-radius: 20px;
-  color: #73c7ff;
-  font-size: 9px;
-  letter-spacing: 1px;
+  display:inline-block;padding:7px 10px;
+  border:1px solid #347dc688;border-radius:20px;
+  color:#73c7ff;font-size:9px;letter-spacing:1px;
 }
 .preview-content h3 {
-  max-width: 340px;
-  margin: 17px 0 12px;
-  font-size: clamp(23px,3vw,37px);
-  line-height: 1.2;
-  color: #fff;
+  margin:17px 0 12px;
+  font-size:clamp(23px,3vw,37px);line-height:1.2;
 }
-.preview-content h3 span {
-  color: #43baff;
-}
-.preview-content p {
-  font-size: 11px;
-  line-height: 1.7;
-  color: #a8bbdb;
-}
+.preview-content h3 span {color:#43baff}
+.preview-content p {color:#a8bbdb;font-size:11px;line-height:1.7}
 .preview-button {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 10px 15px;
-  border-radius: 7px;
-  background: linear-gradient(110deg,#008dff,#7140ed);
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
+  display:inline-block;margin-top:22px;padding:10px 15px;
+  border-radius:7px;
+  background:linear-gradient(110deg,#008dff,#7140ed);
+  color:white;font-size:10px;font-weight:700;
 }
-.preview-bottom {
-  display: flex;
-  gap: 8px;
-  margin-top: 26px;
-}
+.preview-bottom {display:flex;gap:8px;margin-top:26px}
 .preview-bottom i {
-  flex: 1;
-  height: 32px;
-  border: 1px solid #4276c555;
-  border-radius: 6px;
-  background: #132a53;
-}
-.project-info {
-  position: relative;
-  z-index: 1;
+  flex:1;height:32px;border:1px solid #4276c555;
+  border-radius:6px;background:#132a53;
 }
 .project-type {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 9px 14px;
-  border: 1px solid #3286df88;
-  border-radius: 30px;
-  background: #0a397555;
-  color: #7ed2ff;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  font-weight: 800;
+  display:inline-block;margin-bottom:20px;padding:9px 14px;
+  border:1px solid #3286df88;border-radius:30px;
+  color:#7ed2ff;font-size:11px;letter-spacing:1px;
 }
-.project-info h3 {
-  font-size: clamp(29px,3.4vw,44px);
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-.project-info > p {
-  color: #aab8d4;
-  font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 23px;
-}
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-bottom: 30px;
-}
-.project-tech span {
-  padding: 9px 13px;
-  border: 1px solid #4669ac99;
-  border-radius: 9px;
-  background: #13254b;
-  color: #a9ceff;
-  font-size: 12px;
-}
+.project-info h3 {font-size:clamp(29px,3.4vw,44px);margin-bottom:20px}
+.project-info>p {color:#aab8d4;line-height:1.9}
+.project-tech {margin-bottom:30px}
 .project-live-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 15px 22px;
-  border-radius: 11px;
-  background: linear-gradient(110deg,#008fff,#7542ed);
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 800;
-  box-shadow: 0 8px 28px #087aff44;
-  transition: transform .3s,box-shadow .3s;
+  display:inline-flex;gap:14px;align-items:center;
+  padding:15px 22px;border-radius:11px;
+  background:linear-gradient(110deg,#008fff,#7542ed);
+  color:white;text-decoration:none;font-weight:800;
+  box-shadow:0 8px 28px #087aff44;
 }
-.project-live-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 13px 32px #087aff66;
+.project-caption {margin-top:22px;font-size:12px}
+
+/* STEP 20: PREMIUM CONTACT SECTION */
+.contact-premium {
+  position:relative;
+  isolation:isolate;
 }
-.project-live-btn span { font-size: 20px; }
-.project-caption {
-  margin-top: 22px;
-  color: #6f91c4;
-  font-size: 12px;
+.contact-premium::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:340px;height:340px;
+  right:0;top:100px;
+  border-radius:50%;
+  background:#7134ff;
+  opacity:.17;
+  filter:blur(100px);
+  pointer-events:none;
+}
+.contact-layout {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:25px;
+  align-items:start;
+}
+.contact-details,.contact-form-card {
+  border:1px solid #4678bf88;
+  border-radius:28px;
+  background:linear-gradient(145deg,#112653ed,#080e29f5);
+  box-shadow:inset 0 1px #ffffff22,0 25px 55px #0005;
+}
+.contact-details {padding:35px}
+.contact-details h3 {font-size:27px;margin-bottom:15px}
+.contact-details>p {
+  color:#aab8d4;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+.contact-method {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:18px 0;
+  border-top:1px solid #5275aa55;
+  text-decoration:none;
+  transition:transform .3s;
+}
+.contact-method:hover {transform:translateX(5px)}
+.contact-method-icon {
+  flex:none;
+  display:grid;
+  place-items:center;
+  width:49px;height:49px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#076cff,#803aff);
+  color:white;
+  font-size:22px;
+}
+.contact-method small {
+  display:block;
+  color:#8eabd6;
+  font-size:11px;
+  margin-bottom:6px;
+  letter-spacing:1px;
+}
+.contact-method strong {
+  display:block;
+  color:#eaf3ff;
+  font-size:clamp(12px,1.3vw,15px);
+  overflow-wrap:anywhere;
+}
+.contact-form-card {padding:35px}
+.contact-form-card h3 {font-size:26px;margin-bottom:9px}
+.form-intro {color:#aab8d4;font-size:14px;line-height:1.7;margin-bottom:28px}
+.contact-form {display:grid;gap:20px}
+.form-two {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+.form-field label {
+  display:block;
+  margin-bottom:10px;
+  color:#d8e9ff;
+  font-size:13px;
+  font-weight:700;
+}
+.form-field input,.form-field select,.form-field textarea {
+  display:block;
+  width:100%;
+  min-width:0;
+  padding:15px;
+  border:1px solid #3a5b93;
+  border-radius:11px;
+  outline:none;
+  background:#081631;
+  color:#f2f7ff;
+  font:inherit;
+  font-size:14px;
+  transition:border-color .25s,box-shadow .25s;
+}
+.form-field textarea {
+  min-height:135px;
+  resize:vertical;
+}
+.form-field input::placeholder,.form-field textarea::placeholder {
+  color:#788db3;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus {
+  border-color:#19adff;
+  box-shadow:0 0 0 3px #008cff25;
+}
+.form-field select option {background:#081631;color:white}
+.contact-submit {
+  width:100%;
+  padding:17px 20px;
+  border:0;
+  border-radius:12px;
+  background:linear-gradient(110deg,#008fff,#7940ef);
+  color:white;
+  font:inherit;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 10px 30px #087aff44;
+  transition:transform .3s,box-shadow .3s;
+}
+.contact-submit:hover {
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px #087aff66;
+}
+.form-note {
+  color:#91a7c9;
+  font-size:12px;
+  line-height:1.7;
 }
 @media(max-width:950px) {
-  .premium-services-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .project-showcase { grid-template-columns: 1fr; gap: 35px; }
+  .premium-services-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-showcase,.contact-layout {grid-template-columns:1fr}
 }
 @media(max-width:700px) {
-  .about-layout,.founders-grid,.premium-services-grid {
-    grid-template-columns: 1fr;
+  .about-layout,.founders-grid,.premium-services-grid,.form-two {
+    grid-template-columns:1fr;
   }
-  .about-premium,.services-premium,.projects-premium {
-    padding: 45px 6%;
-    margin-bottom: 45px;
+  .about-premium,.services-premium,.projects-premium,.contact-premium {
+    padding:45px 6%;
+    margin-bottom:45px;
   }
-  .about-glass { padding: 26px; }
-  .about-visual { min-height: 270px; }
-  .premium-service-card { min-height: 260px; }
-  .project-showcase { padding: 22px; border-radius: 22px; }
-  .project-preview-wrap { padding: 8px 8px 22px 0; }
-  .preview-content { min-height: 270px; padding: 18px; }
-  .preview-nav { padding-bottom: 27px; }
-  .project-browser { transform: none; }
-  .project-info h3 { font-size: 30px; }
+  .about-glass,.contact-details,.contact-form-card {padding:25px}
+  .about-visual {min-height:270px}
+  .premium-service-card {min-height:260px}
+  .project-showcase {padding:22px;gap:30px}
+  .project-browser {transform:none}
+  .preview-content {min-height:270px;padding:18px}
+  .preview-nav {padding-bottom:27px}
+  .project-info h3 {font-size:30px}
 }
 @media(prefers-reduced-motion:reduce) {
-  .about-cube { animation: none; }
-  .premium-service-card,.service-arrow,.project-browser,.project-live-btn {
-    transition: none;
+  .about-cube {animation:none}
+  .premium-service-card,.project-browser,.contact-submit,.contact-method {
+    transition:none;
   }
 }
 </style>
@@ -517,9 +411,7 @@
     <img src="webart_github_under_1mb.jpg" alt="Webart.io logo">
     <span>Webart<span class="blue">.io</span></span>
   </a>
-
   <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-
   <nav class="nav-links" aria-label="Main navigation">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
@@ -527,7 +419,6 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <a class="nav-cta" href="#contact">Get Started ↗</a>
 </header>
 
@@ -540,21 +431,17 @@
       <span class="status-dot"></span>
       BUILDING DIGITAL SOLUTIONS
     </div>
-
     <h1>Turning Ideas Into <span>Digital Reality</span></h1>
-
     <p>
       We build modern websites, innovative software and digital
       solutions that help businesses grow.
     </p>
-
     <div class="hero-actions">
       <a href="#projects" class="btn primary">Explore Our Work →</a>
       <a href="#contact" class="btn secondary">Get in Touch</a>
     </div>
   </div>
 
-  <!-- CSS 3D LAPTOP -->
   <div class="hero-art" aria-label="Decorative futuristic laptop illustration">
     <div class="orbit orbit-one"></div>
     <div class="orbit orbit-two"></div>
@@ -588,13 +475,12 @@
         <div class="trackpad"></div>
       </div>
     </div>
-
     <div class="platform"></div>
     <div class="art-glow"></div>
   </div>
 </section>
 
-<!-- FOUR HOMEPAGE CARDS -->
+<!-- FOUR FEATURE CARDS -->
 <section class="features" aria-label="What we create">
   <article class="feature-card">
     <div class="feature-icon">◎</div>
@@ -602,21 +488,18 @@
     <p>Modern, responsive websites for your business.</p>
     <a href="#services" aria-label="Explore website services">↗</a>
   </article>
-
   <article class="feature-card">
     <div class="feature-icon purple-icon">⌘</div>
     <h3>Software</h3>
     <p>Custom software built for your unique needs.</p>
     <a href="#services" aria-label="Explore software services">↗</a>
   </article>
-
   <article class="feature-card">
     <div class="feature-icon">▦</div>
     <h3>Solutions</h3>
     <p>Digital solutions to make your work easier.</p>
     <a href="#services" aria-label="Explore digital solutions">↗</a>
   </article>
-
   <article class="feature-card">
     <div class="feature-icon purple-icon">↗</div>
     <h3>Growth</h3>
@@ -625,51 +508,42 @@
   </article>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="about-premium" id="about">
   <div class="about-heading">
     <span class="section-label">WHO WE ARE</span>
     <h2>About <span>Webart.io</span></h2>
   </div>
-
   <div class="about-layout">
     <div class="about-glass">
       <h3>We Turn Ideas Into <span>Digital Reality.</span></h3>
-
       <p>Webart.io is a remote-first digital solutions startup founded in 2026.</p>
-
       <p>
         We build modern websites, innovative software and digital
-        experiences that help businesses establish and grow their
-        online presence.
+        experiences that help businesses establish and grow their online presence.
       </p>
-
       <p>
-        Our approach combines creativity, modern technology and
-        thoughtful design to build practical digital solutions.
+        Our approach combines creativity, modern technology and thoughtful
+        design to build practical digital solutions.
       </p>
-
       <div class="about-tags">
         <span>Creative Design</span>
         <span>Modern Technology</span>
         <span>Digital Solutions</span>
       </div>
     </div>
-
     <div class="about-visual" aria-hidden="true">
       <div class="about-cube"><span>W</span></div>
     </div>
   </div>
 
   <h3 class="founders-heading">Meet Our Founders</h3>
-
   <div class="founders-grid">
     <article class="founder-card">
       <div class="founder-avatar" aria-hidden="true">KG</div>
       <h4>Krushna Gaikwad</h4>
       <p>CO-FOUNDER</p>
     </article>
-
     <article class="founder-card">
       <div class="founder-avatar" aria-hidden="true">HK</div>
       <h4>Harshad Konde</h4>
@@ -678,17 +552,13 @@
   </div>
 </section>
 
-<!-- SERVICES SECTION -->
+<!-- SERVICES -->
 <section class="services-premium" id="services">
   <div class="services-heading">
     <span class="section-label">WHAT WE DO</span>
     <h2>Our <span>Services</span></h2>
-    <p>
-      From your first idea to a finished digital experience,
-      explore what Webart.io can build.
-    </p>
+    <p>From your first idea to a finished digital experience, explore what Webart.io can build.</p>
   </div>
-
   <div class="premium-services-grid">
 
     <article class="premium-service-card">
@@ -742,31 +612,22 @@
   </div>
 </section>
 
-<!-- STEP 19: PREMIUM PROJECT SHOWCASE -->
+<!-- PROJECT -->
 <section class="projects-premium" id="projects">
-
   <div class="projects-heading">
     <span class="section-label">OUR PORTFOLIO</span>
     <h2>Featured <span>Project</span></h2>
-    <p>
-      Explore a website demo developed as part of our
-      digital development portfolio.
-    </p>
+    <p>Explore a website demo developed as part of our digital development portfolio.</p>
   </div>
 
   <article class="project-showcase">
-
-    <!-- STYLIZED BROWSER PREVIEW -->
     <div class="project-preview-wrap">
       <div class="project-browser">
-
         <div class="browser-top">
           <div class="browser-dots" aria-hidden="true">
             <i></i><i></i><i></i>
           </div>
-          <div class="browser-address">
-            revolution-science-academy
-          </div>
+          <div class="browser-address">revolution-science-academy</div>
         </div>
 
         <div class="preview-content">
@@ -776,93 +637,181 @@
               <i></i><i></i><i></i>
             </div>
           </div>
-
           <span class="preview-hero-label">CREATING TOPPERS...</span>
-
           <h3>Learn. Practice. <span>Achieve.</span></h3>
-       <p>
-            Foundation • Bridge Course • Science<br>
-            MHT-CET • IIT-JEE • NEET
-          </p>
-
+    <p>Foundation • Bridge Course • Science<br>MHT-CET • IIT-JEE • NEET</p>
           <span class="preview-button">Admission Enquiry ↗</span>
-
           <div class="preview-bottom" aria-hidden="true">
             <i></i><i></i><i></i>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- PROJECT DETAILS -->
     <div class="project-info">
-
       <span class="project-type">EDUCATIONAL WEBSITE DEMO</span>
-
       <h3>Revolution Science Academy</h3>
-
       <p>
         A responsive website demo created for an educational academy,
-        presenting its courses, results, gallery and admission
-        enquiry information in one digital experience.
+        presenting its courses, results, gallery and admission enquiry
+        information in one digital experience.
       </p>
-
       <div class="project-tech">
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
         <span>Responsive Design</span>
       </div>
-
       <a
         class="project-live-btn"
         href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        View Live Demo <span>↗</span>
-       </a>
-
-      <p class="project-caption">
-        Portfolio project • Webart.io
-      </p>
-
+      >View Live Demo ↗</a>
+      <p class="project-caption">Portfolio project • Webart.io</p>
     </div>
-
   </article>
-
 </section>
 
-<!-- CONTACT SECTION -->
-<section class="content-section contact-section" id="contact">
-  <span class="section-label">LET'S CONNECT</span>
-  <h2>Have a project in mind?</h2>
-  <p>Let's turn your idea into digital reality.</p>
+<!-- STEP 20: CONTACT -->
+<section class="contact-premium" id="contact">
+  <div class="contact-heading">
+    <span class="section-label">LET'S CONNECT</span>
+    <h2>Let's Build Something <span>Great.</span></h2>
+    <p>
+      Have a website, software or digital project in mind?
+      Tell us about your idea and start a conversation with Webart.io.
+    </p>
+  </div>
+  <div class="contact-layout">
 
-  <div class="contact-actions">
-    <a class="btn primary" href="mailto:Webart.io.Official@gmail.com">
-      Email Us ↗
-    </a>
+    <aside class="contact-details">
+      <h3>Get in Touch</h3>
+      <p>
+        We're a remote-first digital startup. Connect with us
+        using our official email or Instagram profile.
+      </p>
 
-    <a
-      class="btn secondary"
-      href="https://www.instagram.com/webar_t.io/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Instagram ↗
-    </a>
+      <a class="contact-method" href="mailto:Webart.io.Official@gmail.com">
+        <span class="contact-method-icon" aria-hidden="true">✉</span>
+        <span>
+          <small>OFFICIAL EMAIL</small>
+          <strong>Webart.io.Official@gmail.com</strong>
+        </span>
+      </a>
+
+      <a
+        class="contact-method"
+        href="https://www.instagram.com/webar_t.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="contact-method-icon" aria-hidden="true">◎</span>
+        <span>
+          <small>INSTAGRAM</small>
+          <strong>@webar_t.io</strong>
+        </span>
+      </a>
+    </aside>
+
+    <div class="contact-form-card">
+      <h3>Start Your Project</h3>
+      <p class="form-intro">Fill in the details below to prepare an email enquiry.</p>
+
+      <form class="contact-form" id="projectEnquiry">
+
+        <div class="form-two">
+          <div class="form-field">
+            <label for="clientName">Your Name *</label>
+            <input id="clientName" name="clientName" type="text"
+              autocomplete="name" placeholder="Enter your name"
+              maxlength="100" required>
+          </div>
+          <div class="form-field">
+            <label for="clientEmail">Email Address *</label>
+            <input id="clientEmail" name="clientEmail" type="email"
+              autocomplete="email" placeholder="Enter your email"
+              maxlength="150" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="clientService">Service Required *</label>
+          <select id="clientService" name="clientService" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Website Development</option>
+            <option>Custom Software</option>
+            <option>Web Applications</option>
+            <option>UI/UX Design</option>
+            <option>SEO</option>
+            <option>E-commerce Websites</option>
+            <option>Other / Not Sure Yet</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="clientMessage">Project Details *</label>
+          <textarea id="clientMessage" name="clientMessage"
+            placeholder="Tell us a little about your project..."
+            maxlength="1500" required></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit">
+          Prepare Email Enquiry ↗
+        </button>
+
+        <p class="form-note">
+          Your email app will open with your enquiry prepared.
+          Review the message and tap Send in your email app.
+        </p>
+      </form>
+    </div>
+
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <strong>Webart.io</strong>
   <p>Turning Ideas Into Digital Reality</p>
   <small>© <span id="year">2026</span> Webart.io</small>
 </footer>
+
+<!-- EMAIL ENQUIRY LOGIC -->
+<script>
+document.getElementById("projectEnquiry").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("clientName").value.trim();
+  const email = document.getElementById("clientEmail").value.trim();
+  const service = document.getElementById("clientService").value;
+  const message = document.getElementById("clientMessage").value.trim();
+
+  if (!name || !email || !service || !message) {
+    alert("Please complete all required fields.");
+    return;
+  }
+
+  const subject = "Webart.io Project Enquiry - " + service;
+
+  const body =
+    "Hello Webart.io,\n\n" +
+    "I would like to enquire about a project.\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Service: " + service + "\n\n" +
+    "Project Details:\n" + message + "\n\n" +
+    "Thank you.";
+
+  const mailto =
+    "mailto:Webart.io.Official@gmail.com" +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+  window.location.href = mailto;
+});
+</script>
+
 </body>
 </html>
