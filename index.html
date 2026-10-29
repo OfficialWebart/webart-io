@@ -1,48 +1,178 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Webart.io | Digital Solutions</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Webart.io builds modern websites, software and digital solutions.">
+  <title>Webart.io | Turning Ideas Into Digital Reality</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <header class="navbar">
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <img src="webart_github_under_1mb.jpg" alt="Webart.io logo">
+      <span>Webart<span class="blue">.io</span></span>
+    </a>
 
-        <div class="logo">
-            <img src="webart_github_under_1mb.jpg" alt="Webart.io Logo">
-            <h2>Webart.io</h2>
-        </div>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    </header>
+    <a class="nav-cta" href="#contact">Get Started ↗</a>
+  </header>
 
-    <!-- HOMEPAGE -->
-    <section id="home" class="hero">
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> BUILDING DIGITAL SOLUTIONS</div>
 
-        <h1>Turning Ideas Into Digital Reality</h1>
+        <h1>
+          Turning Ideas Into
+          <span>Digital Reality</span>
+        </h1>
 
         <p>
-            We build modern websites, innovative software
-            and digital solutions that help businesses grow.
+          We build modern websites, innovative software and
+          digital solutions that help businesses grow.
         </p>
 
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">Explore Our Work <span>→</span></a>
+          <a href="#contact" class="btn secondary">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- CSS 3D LAPTOP ARTWORK -->
+      <div class="hero-art" aria-label="Decorative futuristic laptop illustration">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="floating-panel panel-code" aria-hidden="true">
+          <div class="panel-dots"><i></i><i></i><i></i></div>
+          <div class="code-line long"></div>
+          <div class="code-line medium purple"></div>
+          <div class="code-line short"></div>
+          <div class="code-line medium"></div>
+        </div>
+
+        <div class="floating-panel panel-web" aria-hidden="true">
+          <div class="panel-dots"><i></i><i></i><i></i></div>
+          <div class="web-picture"></div>
+          <div class="web-line"></div>
+          <div class="web-line small"></div>
+        </div>
+
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="camera"></div>
+            <div class="screen-inner">
+              <div class="screen-logo">W</div>
+              <strong>Webart<span>.io</span></strong>
+              <small>TURNING IDEAS INTO DIGITAL REALITY</small>
+            </div>
+          </div>
+          <div class="laptop-base">
+            <div class="keyboard"></div>
+            <div class="trackpad"></div>
+          </div>
+        </div>
+
+        <div class="platform"></div>
+        <div class="art-glow"></div>
+      </div>
     </section>
 
+    <!-- FOUR FEATURE CARDS -->
+    <section class="features" aria-label="What we create">
+      <article class="feature-card">
+        <div class="feature-icon">◎</div>
+        <h3>Websites</h3>
+        <p>Modern, responsive websites for your business.</p>
+        <a href="#services" aria-label="Explore website services">↗</a>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon purple-icon">⌘</div>
+        <h3>Software</h3>
+        <p>Custom software built for your unique needs.</p>
+        <a href="#services" aria-label="Explore software services">↗</a>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">▦</div>
+        <h3>Solutions</h3>
+        <p>Digital solutions to make your work easier.</p>
+        <a href="#services" aria-label="Explore digital solutions">↗</a>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon purple-icon">↗</div>
+        <h3>Growth</h3>
+        <p>Strategies that help your business grow online.</p>
+        <a href="#contact" aria-label="Contact us about growth">↗</a>
+      </article>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="content-section" id="about">
+      <span class="section-label">WHO WE ARE</span>
+      <h2>About Webart.io</h2>
+      <p>Founded in 2026 by Krushna Gaikwad and Harshad Konde, Webart.io is a remote-first digital solutions startup. We combine design and development to turn ideas into useful digital experiences.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="content-section" id="services">
+      <span class="section-label">WHAT WE DO</span>
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div>Website Development</div>
+        <div>Custom Software</div>
+        <div>Web Applications</div>
+        <div>UI/UX Design</div>
+        <div>SEO</div>
+        <div>E-commerce Websites</div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="content-section" id="projects">
+      <span class="section-label">OUR WORK</span>
+      <h2>Featured Project</h2>
+      <div class="project-card">
+        <h3>Revolution Science Academy</h3>
+        <p>Educational website demo.</p>
+        <a class="btn secondary" href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/" target="_blank" rel="noopener noreferrer">View Live Demo ↗</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="content-section contact-section" id="contact">
+      <span class="section-label">LET'S CONNECT</span>
+      <h2>Have a project in mind?</h2>
+      <p>Let's turn your idea into digital reality.</p>
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:Webart.io.Official@gmail.com">Email Us ↗</a>
+        <a class="btn secondary" href="https://www.instagram.com/webar_t.io/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Webart.io</strong>
+    <p>Turning Ideas Into Digital Reality</p>
+    <small>© <span id="year">2026</span> Webart.io</small>
+  </footer>
+
 </body>
-</html>
+            </html>
+            
