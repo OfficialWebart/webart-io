@@ -8,9 +8,268 @@
   <title>Webart.io | Turning Ideas Into Digital Reality</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+
+  <!-- New About Section Styling -->
+  <style>
+    .about-premium {
+      position: relative;
+      max-width: 1350px;
+      margin: 50px auto 110px;
+      padding: 75px 6%;
+      overflow: hidden;
+      scroll-margin-top: 35px;
+    }
+
+    .about-premium::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -130px;
+      top: 30px;
+      background: #6435ff;
+      opacity: .18;
+      filter: blur(100px);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .about-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .about-heading .section-label {
+      color: #00b7ff;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .about-heading h2 {
+      margin-top: 15px;
+      font-size: clamp(36px, 5vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    .about-heading h2 span {
+      background: linear-gradient(110deg, #00c6ff, #a64cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: stretch;
+      gap: 28px;
+    }
+
+    .about-glass {
+      position: relative;
+      padding: 45px;
+      border-radius: 28px;
+      border: 1px solid #4775c255;
+      background: linear-gradient(
+        145deg,
+        #122852aa,
+        #080e29cc
+      );
+      backdrop-filter: blur(18px);
+      box-shadow:
+        0 25px 60px #0005,
+        inset 0 1px #ffffff22;
+    }
+
+    .about-glass h3 {
+      font-size: clamp(25px, 3vw, 35px);
+      line-height: 1.3;
+      margin-bottom: 22px;
+    }
+
+    .about-glass h3 span {
+      color: #00b7ff;
+    }
+
+    .about-glass p {
+      color: #aab8d4;
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 17px;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .about-tags span {
+      border: 1px solid #315caa;
+      background: #0b255588;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-size: 12px;
+      color: #9cceff;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #36599c77;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at center, #243c98aa, transparent 65%),
+        linear-gradient(145deg, #0c1b40, #080d25);
+      overflow: hidden;
+      perspective: 800px;
+    }
+
+    .about-visual::before {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 2px solid #168cff;
+      border-radius: 50%;
+      transform: rotateX(65deg);
+      box-shadow: 0 0 35px #168cff77;
+    }
+
+    .about-cube {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 165px;
+      height: 165px;
+      border: 2px solid #479bff;
+      border-radius: 32px;
+      background: linear-gradient(135deg, #006dff, #752bdf);
+      box-shadow:
+        20px 20px 0 #14125b,
+        0 0 65px #187bff88,
+        inset 0 0 35px #ffffff22;
+      transform: rotate(-12deg) rotateY(-15deg);
+      animation: aboutFloat 5s ease-in-out infinite;
+    }
+
+    .about-cube span {
+      font-size: 100px;
+      font-weight: 900;
+      font-style: italic;
+      color: white;
+      text-shadow: 0 5px 20px #00154d;
+    }
+
+    @keyframes aboutFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(-12deg) rotateY(-15deg);
+      }
+      50% {
+        transform: translateY(-15px) rotate(-8deg) rotateY(-8deg);
+      }
+    }
+
+    .founders-heading {
+      margin: 65px 0 25px;
+      font-size: 27px;
+      text-align: center;
+    }
+
+    .founders-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .founder-card {
+      padding: 30px;
+      text-align: center;
+      border: 1px solid #36599c88;
+      border-radius: 22px;
+      background: linear-gradient(140deg, #10204a, #090e26);
+      transition: transform .35s, box-shadow .35s;
+    }
+
+    .founder-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px #176aff33;
+    }
+
+    .founder-avatar {
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #00aaff, #913cff);
+      font-size: 25px;
+      font-weight: 800;
+      box-shadow: 0 5px 25px #166cff55;
+    }
+
+    .founder-card h4 {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    .founder-card p {
+      color: #8fc8ff;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 750px) {
+      .about-premium {
+        padding: 45px 6%;
+        margin-bottom: 50px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .about-glass {
+        padding: 28px;
+      }
+
+      .about-visual {
+        min-height: 300px;
+      }
+
+      .founders-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-cube {
+        width: 135px;
+        height: 135px;
+      }
+
+      .about-cube span {
+        font-size: 80px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .about-cube {
+        animation: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- NAVIGATION -->
   <header class="navbar">
     <a href="#home" class="brand">
       <img src="webart_github_under_1mb.jpg" alt="Webart.io logo">
@@ -31,10 +290,15 @@
   </header>
 
   <main>
-    <!-- HERO -->
+
+    <!-- 3D HOMEPAGE -->
     <section class="hero" id="home">
+
       <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> BUILDING DIGITAL SOLUTIONS</div>
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          BUILDING DIGITAL SOLUTIONS
+        </div>
 
         <h1>
           Turning Ideas Into
@@ -47,12 +311,16 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#projects" class="btn primary">Explore Our Work <span>→</span></a>
-          <a href="#contact" class="btn secondary">Get in Touch</a>
+          <a href="#projects" class="btn primary">
+            Explore Our Work <span>→</span>
+          </a>
+          <a href="#contact" class="btn secondary">
+            Get in Touch
+          </a>
         </div>
       </div>
 
-      <!-- CSS 3D LAPTOP ARTWORK -->
+      <!-- 3D LAPTOP -->
       <div class="hero-art" aria-label="Decorative futuristic laptop illustration">
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
@@ -92,8 +360,9 @@
       </div>
     </section>
 
-    <!-- FOUR FEATURE CARDS -->
+    <!-- FEATURE CARDS -->
     <section class="features" aria-label="What we create">
+
       <article class="feature-card">
         <div class="feature-icon">◎</div>
         <h3>Websites</h3>
@@ -123,17 +392,75 @@
       </article>
     </section>
 
-    <!-- ABOUT -->
-    <section class="content-section" id="about">
-      <span class="section-label">WHO WE ARE</span>
-      <h2>About Webart.io</h2>
-      <p>Founded in 2026 by Krushna Gaikwad and Harshad Konde, Webart.io is a remote-first digital solutions startup. We combine design and development to turn ideas into useful digital experiences.</p>
+    <!-- NEW PREMIUM ABOUT SECTION -->
+    <section class="about-premium" id="about">
+
+      <div class="about-heading">
+        <span class="section-label">WHO WE ARE</span>
+        <h2>About <span>Webart.io</span></h2>
+      </div>
+
+      <div class="about-layout">
+
+        <div class="about-glass">
+          <h3>We Turn Ideas Into <span>Digital Reality.</span></h3>
+
+          <p>
+            Webart.io is a remote-first digital solutions startup
+            founded in 2026.
+          </p>
+
+          <p>
+            We build modern websites, innovative software and
+            digital experiences that help businesses establish
+            and grow their online presence.
+          </p>
+
+          <p>
+            Our approach combines creativity, modern technology
+            and thoughtful design to build practical digital solutions.
+          </p>
+
+          <div class="about-tags">
+            <span>Creative Design</span>
+            <span>Modern Technology</span>
+            <span>Digital Solutions</span>
+          </div>
+        </div>
+
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-cube">
+            <span>W</span>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="founders-heading">Meet Our Founders</h3>
+
+      <div class="founders-grid">
+
+        <article class="founder-card">
+          <div class="founder-avatar" aria-hidden="true">KG</div>
+          <h4>Krushna Gaikwad</h4>
+          <p>CO-FOUNDER</p>
+        </article>
+
+        <article class="founder-card">
+          <div class="founder-avatar" aria-hidden="true">HK</div>
+          <h4>Harshad Konde</h4>
+          <p>CO-FOUNDER</p>
+        </article>
+
+      </div>
+
     </section>
 
     <!-- SERVICES -->
     <section class="content-section" id="services">
       <span class="section-label">WHAT WE DO</span>
       <h2>Our Services</h2>
+
       <div class="service-grid">
         <div>Website Development</div>
         <div>Custom Software</div>
@@ -148,10 +475,17 @@
     <section class="content-section" id="projects">
       <span class="section-label">OUR WORK</span>
       <h2>Featured Project</h2>
+
       <div class="project-card">
         <h3>Revolution Science Academy</h3>
         <p>Educational website demo.</p>
-        <a class="btn secondary" href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/" target="_blank" rel="noopener noreferrer">View Live Demo ↗</a>
+
+        <a class="btn secondary"
+           href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Live Demo ↗
+        </a>
       </div>
     </section>
 
@@ -160,13 +494,24 @@
       <span class="section-label">LET'S CONNECT</span>
       <h2>Have a project in mind?</h2>
       <p>Let's turn your idea into digital reality.</p>
+
       <div class="contact-actions">
-        <a class="btn primary" href="mailto:Webart.io.Official@gmail.com">Email Us ↗</a>
-        <a class="btn secondary" href="https://www.instagram.com/webar_t.io/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a class="btn primary" href="mailto:Webart.io.Official@gmail.com">
+          Email Us ↗
+        </a>
+
+        <a class="btn secondary"
+           href="https://www.instagram.com/webar_t.io/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram ↗
+        </a>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <strong>Webart.io</strong>
     <p>Turning Ideas Into Digital Reality</p>
@@ -174,5 +519,4 @@
   </footer>
 
 </body>
-            </html>
-            
+</html>
