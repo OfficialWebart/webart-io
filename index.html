@@ -2,521 +2,867 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Webart.io builds modern websites, software and digital solutions.">
-  <title>Webart.io | Turning Ideas Into Digital Reality</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Webart.io builds modern websites, innovative software and digital solutions.">
+<title>Webart.io | Turning Ideas Into Digital Reality</title>
 
-  <!-- New About Section Styling -->
-  <style>
-    .about-premium {
-      position: relative;
-      max-width: 1350px;
-      margin: 50px auto 110px;
-      padding: 75px 6%;
-      overflow: hidden;
-      scroll-margin-top: 35px;
-    }
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
-    .about-premium::before {
-      content: "";
-      position: absolute;
-      width: 380px;
-      height: 380px;
-      right: -130px;
-      top: 30px;
-      background: #6435ff;
-      opacity: .18;
-      filter: blur(100px);
-      border-radius: 50%;
-      pointer-events: none;
-    }
+<style>
+/* ABOUT SECTION */
+.about-premium {
+  max-width: 1350px;
+  margin: 50px auto 100px;
+  padding: 65px 6%;
+  scroll-margin-top: 35px;
+}
+.about-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about-heading h2 {
+  margin-top: 15px;
+  font-size: clamp(34px,5vw,58px);
+}
+.about-heading h2 span,
+.services-heading h2 span,
+.projects-heading h2 span {
+  background: linear-gradient(110deg,#00c6ff,#a64cff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+}
+.about-glass,.about-visual,.founder-card {
+  border: 1px solid #4775c266;
+  border-radius: 26px;
+  background: linear-gradient(145deg,#122852aa,#080e29dd);
+  box-shadow: inset 0 1px #ffffff20,0 20px 45px #0004;
+}
+.about-glass { padding: 40px; }
+.about-glass h3 { font-size: 30px; margin-bottom: 20px; }
+.about-glass h3 span { color: #00b7ff; }
+.about-glass p {
+  color: #aab8d4;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+.about-tags span {
+  padding: 10px 15px;
+  border: 1px solid #315caa;
+  border-radius: 30px;
+  color: #9cceff;
+  font-size: 12px;
+}
+.about-visual {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle,#243c98aa,transparent 70%),#080d25;
+  perspective: 800px;
+}
+.about-cube {
+  width: 155px;
+  height: 155px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #479bff;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#006dff,#752bdf);
+  box-shadow: 20px 20px #14125b,0 0 60px #187bff88;
+  transform: rotate(-12deg) rotateY(-15deg);
+  animation: aboutFloat 5s ease-in-out infinite;
+}
+.about-cube span {
+  font-size: 95px;
+  font-weight: 900;
+  font-style: italic;
+}
+@keyframes aboutFloat {
+  50% { transform: translateY(-15px) rotate(-7deg) rotateY(-8deg); }
+}
+.founders-heading {
+  text-align: center;
+  margin: 65px 0 25px;
+  font-size: 27px;
+}
+.founders-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+.founder-card { text-align: center; padding: 30px; }
+.founder-avatar {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#00aaff,#913cff);
+  font-size: 25px;
+  font-weight: 800;
+}
+.founder-card h4 { margin-bottom: 10px; font-size: 20px; }
+.founder-card p {
+  color: #8fc8ff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
 
-    .about-heading {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+/* SERVICES SECTION */
+.services-premium {
+  max-width: 1350px;
+  margin: 0 auto 100px;
+  padding: 65px 5%;
+  position: relative;
+  scroll-margin-top: 35px;
+}
+.services-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.services-heading h2 {
+  margin: 16px 0;
+  font-size: clamp(36px,5vw,56px);
+  letter-spacing: -2px;
+}
+.services-heading p {
+  max-width: 650px;
+  margin: auto;
+  color: #aab8d4;
+  line-height: 1.8;
+}
+.premium-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+.premium-service-card {
+  position: relative;
+  min-height: 300px;
+  padding: 32px;
+  border-radius: 25px;
+  border: 1px solid #3868ad88;
+  background: linear-gradient(145deg,#102450ee,#080e27ee);
+  box-shadow: inset 0 1px #ffffff20,0 20px 35px #0004;
+  overflow: hidden;
+  transition: transform .4s,box-shadow .4s,border-color .4s;
+}
+.premium-service-card:hover {
+  transform: translateY(-12px) perspective(800px) rotateX(4deg);
+  border-color: #00b7ff;
+  box-shadow: 0 20px 50px #007bff33,0 0 25px #913cff22;
+}
+.service-number {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 12px;
+  color: #6489c2;
+  font-weight: 800;
+}
+.premium-service-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  border-radius: 19px;
+  font-size: 30px;
+  color: #62d5ff;
+  background: linear-gradient(135deg,#123e83,#102052);
+  border: 1px solid #238aff77;
+  box-shadow: 0 0 25px #007bff33;
+}
+.premium-service-card:nth-child(even) .premium-service-icon {
+  color: #c09aff;
+  background: linear-gradient(135deg,#432182,#191147);
+  border-color: #913cff77;
+}
+.premium-service-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.premium-service-card p {
+  font-size: 14px;
+  color: #aab8d4;
+  line-height: 1.8;
+  padding-bottom: 35px;
+}
+.service-arrow {
+  position: absolute;
+  bottom: 28px;
+  right: 30px;
+  font-size: 26px;
+  color: #00b7ff;
+  transition: transform .3s;
+}
+.premium-service-card:hover .service-arrow {
+  transform: translate(4px,-4px);
+}
 
-    .about-heading .section-label {
-      color: #00b7ff;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .about-heading h2 {
-      margin-top: 15px;
-      font-size: clamp(36px, 5vw, 58px);
-      letter-spacing: -2px;
-    }
-
-    .about-heading h2 span {
-      background: linear-gradient(110deg, #00c6ff, #a64cff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      align-items: stretch;
-      gap: 28px;
-    }
-
-    .about-glass {
-      position: relative;
-      padding: 45px;
-      border-radius: 28px;
-      border: 1px solid #4775c255;
-      background: linear-gradient(
-        145deg,
-        #122852aa,
-        #080e29cc
-      );
-      backdrop-filter: blur(18px);
-      box-shadow:
-        0 25px 60px #0005,
-        inset 0 1px #ffffff22;
-    }
-
-    .about-glass h3 {
-      font-size: clamp(25px, 3vw, 35px);
-      line-height: 1.3;
-      margin-bottom: 22px;
-    }
-
-    .about-glass h3 span {
-      color: #00b7ff;
-    }
-
-    .about-glass p {
-      color: #aab8d4;
-      font-size: 16px;
-      line-height: 1.9;
-      margin-bottom: 17px;
-    }
-
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 25px;
-    }
-
-    .about-tags span {
-      border: 1px solid #315caa;
-      background: #0b255588;
-      padding: 10px 15px;
-      border-radius: 25px;
-      font-size: 12px;
-      color: #9cceff;
-    }
-
-    .about-visual {
-      position: relative;
-      min-height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #36599c77;
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at center, #243c98aa, transparent 65%),
-        linear-gradient(145deg, #0c1b40, #080d25);
-      overflow: hidden;
-      perspective: 800px;
-    }
-
-    .about-visual::before {
-      content: "";
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      border: 2px solid #168cff;
-      border-radius: 50%;
-      transform: rotateX(65deg);
-      box-shadow: 0 0 35px #168cff77;
-    }
-
-    .about-cube {
-      position: relative;
-      display: grid;
-      place-items: center;
-      width: 165px;
-      height: 165px;
-      border: 2px solid #479bff;
-      border-radius: 32px;
-      background: linear-gradient(135deg, #006dff, #752bdf);
-      box-shadow:
-        20px 20px 0 #14125b,
-        0 0 65px #187bff88,
-        inset 0 0 35px #ffffff22;
-      transform: rotate(-12deg) rotateY(-15deg);
-      animation: aboutFloat 5s ease-in-out infinite;
-    }
-
-    .about-cube span {
-      font-size: 100px;
-      font-weight: 900;
-      font-style: italic;
-      color: white;
-      text-shadow: 0 5px 20px #00154d;
-    }
-
-    @keyframes aboutFloat {
-      0%, 100% {
-        transform: translateY(0) rotate(-12deg) rotateY(-15deg);
-      }
-      50% {
-        transform: translateY(-15px) rotate(-8deg) rotateY(-8deg);
-      }
-    }
-
-    .founders-heading {
-      margin: 65px 0 25px;
-      font-size: 27px;
-      text-align: center;
-    }
-
-    .founders-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .founder-card {
-      padding: 30px;
-      text-align: center;
-      border: 1px solid #36599c88;
-      border-radius: 22px;
-      background: linear-gradient(140deg, #10204a, #090e26);
-      transition: transform .35s, box-shadow .35s;
-    }
-
-    .founder-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px #176aff33;
-    }
-
-    .founder-avatar {
-      display: grid;
-      place-items: center;
-      width: 68px;
-      height: 68px;
-      margin: 0 auto 18px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #00aaff, #913cff);
-      font-size: 25px;
-      font-weight: 800;
-      box-shadow: 0 5px 25px #166cff55;
-    }
-
-    .founder-card h4 {
-      font-size: 20px;
-      margin-bottom: 9px;
-    }
-
-    .founder-card p {
-      color: #8fc8ff;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    @media (max-width: 750px) {
-      .about-premium {
-        padding: 45px 6%;
-        margin-bottom: 50px;
-      }
-
-      .about-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .about-glass {
-        padding: 28px;
-      }
-
-      .about-visual {
-        min-height: 300px;
-      }
-
-      .founders-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-cube {
-        width: 135px;
-        height: 135px;
-      }
-
-      .about-cube span {
-        font-size: 80px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .about-cube {
-        animation: none;
-      }
-    }
-  </style>
+/* STEP 19 — PREMIUM PROJECT SHOWCASE */
+.projects-premium {
+  position: relative;
+  max-width: 1350px;
+  margin: 0 auto 110px;
+  padding: 70px 5%;
+  scroll-margin-top: 35px;
+}
+.projects-premium::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  left: -80px;
+  top: 100px;
+  border-radius: 50%;
+  background: #075dff;
+  filter: blur(110px);
+  opacity: .16;
+  pointer-events: none;
+}
+.projects-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.projects-heading h2 {
+  margin: 15px 0;
+  font-size: clamp(36px,5vw,58px);
+  letter-spacing: -2px;
+}
+.projects-heading p {
+  max-width: 650px;
+  margin: auto;
+  color: #aab8d4;
+  line-height: 1.8;
+}
+.project-showcase {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  padding: 45px;
+  border: 1px solid #396cbb99;
+  border-radius: 32px;
+  background: linear-gradient(135deg,#112654ee,#080e29f5);
+  box-shadow:
+    0 30px 65px #0005,
+    inset 0 1px #ffffff25,
+    0 0 45px #176aff12;
+  overflow: hidden;
+}
+.project-showcase::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  right: -110px;
+  bottom: -120px;
+  background: #873bff;
+  filter: blur(85px);
+  opacity: .25;
+  pointer-events: none;
+}
+.project-preview-wrap {
+  position: relative;
+  min-width: 0;
+  perspective: 1000px;
+  padding: 15px 12px 28px 0;
+}
+.project-browser {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #5278c5;
+  border-radius: 16px;
+  background: #08102b;
+  box-shadow:
+    16px 20px 0 #081437,
+    0 25px 55px #0007,
+    0 0 40px #188bff25;
+  transform: rotateY(-7deg) rotateX(3deg);
+  transition: transform .45s,box-shadow .45s;
+}
+.project-showcase:hover .project-browser {
+  transform: rotateY(0) rotateX(0) translateY(-6px);
+  box-shadow: 0 30px 65px #0008,0 0 45px #168bff33;
+}
+.browser-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  background: #142249;
+  border-bottom: 1px solid #4267a477;
+}
+.browser-dots {
+  display: flex;
+  gap: 5px;
+}
+.browser-dots i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6977;
+}
+.browser-dots i:nth-child(2) { background: #ffca65; }
+.browser-dots i:nth-child(3) { background: #55d9a0; }
+.browser-address {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 12px;
+  border-radius: 6px;
+  background: #08132e;
+  color: #8fa9d3;
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.preview-content {
+  min-height: 290px;
+  padding: 25px;
+  background:
+    radial-gradient(circle at 75% 15%,#266dba55,transparent 50%),
+    linear-gradient(145deg,#101e43,#060b20);
+}
+.preview-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 35px;
+}
+.preview-brand {
+  font-size: 13px;
+  font-weight: 800;
+  color: white;
+}
+.preview-nav-lines {
+  display: flex;
+  gap: 7px;
+}
+.preview-nav-lines i {
+  display: block;
+  width: 22px;
+  height: 4px;
+  border-radius: 4px;
+  background: #4771b0;
+}
+.preview-hero-label {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid #347dc688;
+  border-radius: 20px;
+  color: #73c7ff;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.preview-content h3 {
+  max-width: 340px;
+  margin: 17px 0 12px;
+  font-size: clamp(23px,3vw,37px);
+  line-height: 1.2;
+  color: #fff;
+}
+.preview-content h3 span {
+  color: #43baff;
+}
+.preview-content p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #a8bbdb;
+}
+.preview-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background: linear-gradient(110deg,#008dff,#7140ed);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+}
+.preview-bottom {
+  display: flex;
+  gap: 8px;
+  margin-top: 26px;
+}
+.preview-bottom i {
+  flex: 1;
+  height: 32px;
+  border: 1px solid #4276c555;
+  border-radius: 6px;
+  background: #132a53;
+}
+.project-info {
+  position: relative;
+  z-index: 1;
+}
+.project-type {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 9px 14px;
+  border: 1px solid #3286df88;
+  border-radius: 30px;
+  background: #0a397555;
+  color: #7ed2ff;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+.project-info h3 {
+  font-size: clamp(29px,3.4vw,44px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.project-info > p {
+  color: #aab8d4;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 30px;
+}
+.project-tech span {
+  padding: 9px 13px;
+  border: 1px solid #4669ac99;
+  border-radius: 9px;
+  background: #13254b;
+  color: #a9ceff;
+  font-size: 12px;
+}
+.project-live-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 15px 22px;
+  border-radius: 11px;
+  background: linear-gradient(110deg,#008fff,#7542ed);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 8px 28px #087aff44;
+  transition: transform .3s,box-shadow .3s;
+}
+.project-live-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 13px 32px #087aff66;
+}
+.project-live-btn span { font-size: 20px; }
+.project-caption {
+  margin-top: 22px;
+  color: #6f91c4;
+  font-size: 12px;
+}
+@media(max-width:950px) {
+  .premium-services-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .project-showcase { grid-template-columns: 1fr; gap: 35px; }
+}
+@media(max-width:700px) {
+  .about-layout,.founders-grid,.premium-services-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-premium,.services-premium,.projects-premium {
+    padding: 45px 6%;
+    margin-bottom: 45px;
+  }
+  .about-glass { padding: 26px; }
+  .about-visual { min-height: 270px; }
+  .premium-service-card { min-height: 260px; }
+  .project-showcase { padding: 22px; border-radius: 22px; }
+  .project-preview-wrap { padding: 8px 8px 22px 0; }
+  .preview-content { min-height: 270px; padding: 18px; }
+  .preview-nav { padding-bottom: 27px; }
+  .project-browser { transform: none; }
+  .project-info h3 { font-size: 30px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .about-cube { animation: none; }
+  .premium-service-card,.service-arrow,.project-browser,.project-live-btn {
+    transition: none;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <a href="#home" class="brand">
-      <img src="webart_github_under_1mb.jpg" alt="Webart.io logo">
-      <span>Webart<span class="blue">.io</span></span>
-    </a>
+<!-- NAVIGATION -->
+<header class="navbar">
+  <a href="#home" class="brand">
+    <img src="webart_github_under_1mb.jpg" alt="Webart.io logo">
+    <span>Webart<span class="blue">.io</span></span>
+  </a>
 
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <a class="nav-cta" href="#contact">Get Started ↗</a>
-  </header>
+  <a class="nav-cta" href="#contact">Get Started ↗</a>
+</header>
 
-  <main>
+<main>
 
-    <!-- 3D HOMEPAGE -->
-    <section class="hero" id="home">
+<!-- HOMEPAGE -->
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">
+      <span class="status-dot"></span>
+      BUILDING DIGITAL SOLUTIONS
+    </div>
 
-      <div class="hero-copy">
-        <div class="eyebrow">
-          <span class="status-dot"></span>
-          BUILDING DIGITAL SOLUTIONS
-        </div>
+    <h1>Turning Ideas Into <span>Digital Reality</span></h1>
 
-        <h1>
-          Turning Ideas Into
-          <span>Digital Reality</span>
-        </h1>
+    <p>
+      We build modern websites, innovative software and digital
+      solutions that help businesses grow.
+    </p>
 
-        <p>
-          We build modern websites, innovative software and
-          digital solutions that help businesses grow.
-        </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn primary">Explore Our Work →</a>
+      <a href="#contact" class="btn secondary">Get in Touch</a>
+    </div>
+  </div>
 
-        <div class="hero-actions">
-          <a href="#projects" class="btn primary">
-            Explore Our Work <span>→</span>
-          </a>
-          <a href="#contact" class="btn secondary">
-            Get in Touch
-          </a>
+  <!-- CSS 3D LAPTOP -->
+  <div class="hero-art" aria-label="Decorative futuristic laptop illustration">
+    <div class="orbit orbit-one"></div>
+    <div class="orbit orbit-two"></div>
+
+    <div class="floating-panel panel-code" aria-hidden="true">
+      <div class="panel-dots"><i></i><i></i><i></i></div>
+      <div class="code-line long"></div>
+      <div class="code-line medium purple"></div>
+      <div class="code-line short"></div>
+      <div class="code-line medium"></div>
+    </div>
+
+    <div class="floating-panel panel-web" aria-hidden="true">
+      <div class="panel-dots"><i></i><i></i><i></i></div>
+      <div class="web-picture"></div>
+      <div class="web-line"></div>
+      <div class="web-line small"></div>
+    </div>
+
+    <div class="laptop">
+      <div class="laptop-screen">
+        <div class="camera"></div>
+        <div class="screen-inner">
+          <div class="screen-logo">W</div>
+          <strong>Webart<span>.io</span></strong>
+          <small>TURNING IDEAS INTO DIGITAL REALITY</small>
         </div>
       </div>
+      <div class="laptop-base">
+        <div class="keyboard"></div>
+        <div class="trackpad"></div>
+      </div>
+    </div>
 
-      <!-- 3D LAPTOP -->
-      <div class="hero-art" aria-label="Decorative futuristic laptop illustration">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
+    <div class="platform"></div>
+    <div class="art-glow"></div>
+  </div>
+</section>
 
-        <div class="floating-panel panel-code" aria-hidden="true">
-          <div class="panel-dots"><i></i><i></i><i></i></div>
-          <div class="code-line long"></div>
-          <div class="code-line medium purple"></div>
-          <div class="code-line short"></div>
-          <div class="code-line medium"></div>
+<!-- FOUR HOMEPAGE CARDS -->
+<section class="features" aria-label="What we create">
+  <article class="feature-card">
+    <div class="feature-icon">◎</div>
+    <h3>Websites</h3>
+    <p>Modern, responsive websites for your business.</p>
+    <a href="#services" aria-label="Explore website services">↗</a>
+  </article>
+
+  <article class="feature-card">
+    <div class="feature-icon purple-icon">⌘</div>
+    <h3>Software</h3>
+    <p>Custom software built for your unique needs.</p>
+    <a href="#services" aria-label="Explore software services">↗</a>
+  </article>
+
+  <article class="feature-card">
+    <div class="feature-icon">▦</div>
+    <h3>Solutions</h3>
+    <p>Digital solutions to make your work easier.</p>
+    <a href="#services" aria-label="Explore digital solutions">↗</a>
+  </article>
+
+  <article class="feature-card">
+    <div class="feature-icon purple-icon">↗</div>
+    <h3>Growth</h3>
+    <p>Strategies that help your business grow online.</p>
+    <a href="#contact" aria-label="Contact us about growth">↗</a>
+  </article>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-premium" id="about">
+  <div class="about-heading">
+    <span class="section-label">WHO WE ARE</span>
+    <h2>About <span>Webart.io</span></h2>
+  </div>
+
+  <div class="about-layout">
+    <div class="about-glass">
+      <h3>We Turn Ideas Into <span>Digital Reality.</span></h3>
+
+      <p>Webart.io is a remote-first digital solutions startup founded in 2026.</p>
+
+      <p>
+        We build modern websites, innovative software and digital
+        experiences that help businesses establish and grow their
+        online presence.
+      </p>
+
+      <p>
+        Our approach combines creativity, modern technology and
+        thoughtful design to build practical digital solutions.
+      </p>
+
+      <div class="about-tags">
+        <span>Creative Design</span>
+        <span>Modern Technology</span>
+        <span>Digital Solutions</span>
+      </div>
+    </div>
+
+    <div class="about-visual" aria-hidden="true">
+      <div class="about-cube"><span>W</span></div>
+    </div>
+  </div>
+
+  <h3 class="founders-heading">Meet Our Founders</h3>
+
+  <div class="founders-grid">
+    <article class="founder-card">
+      <div class="founder-avatar" aria-hidden="true">KG</div>
+      <h4>Krushna Gaikwad</h4>
+      <p>CO-FOUNDER</p>
+    </article>
+
+    <article class="founder-card">
+      <div class="founder-avatar" aria-hidden="true">HK</div>
+      <h4>Harshad Konde</h4>
+      <p>CO-FOUNDER</p>
+    </article>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services-premium" id="services">
+  <div class="services-heading">
+    <span class="section-label">WHAT WE DO</span>
+    <h2>Our <span>Services</span></h2>
+    <p>
+      From your first idea to a finished digital experience,
+      explore what Webart.io can build.
+    </p>
+  </div>
+
+  <div class="premium-services-grid">
+
+    <article class="premium-service-card">
+      <span class="service-number">01 / 06</span>
+      <div class="premium-service-icon">⌘</div>
+      <h3>Website Development</h3>
+      <p>Modern, responsive and visually engaging websites designed for businesses and brands.</p>
+      <a class="service-arrow" href="#contact" aria-label="Enquire about Website Development">↗</a>
+    </article>
+
+    <article class="premium-service-card">
+      <span class="service-number">02 / 06</span>
+      <div class="premium-service-icon">⚙</div>
+      <h3>Custom Software</h3>
+      <p>Purpose-built software solutions designed around your specific business requirements.</p>
+      <a class="service-arrow" href="#contact" aria-label="Enquire about Custom Software">↗</a>
+    </article>
+
+    <article class="premium-service-card">
+      <span class="service-number">03 / 06</span>
+      <div class="premium-service-icon">▣</div>
+      <h3>Web Applications</h3>
+      <p>Interactive web platforms, dashboards and browser-based applications.</p>
+      <a class="service-arrow" href="#contact" aria-label="Enquire about Web Applications">↗</a>
+    </article>
+
+    <article class="premium-service-card">
+      <span class="service-number">04 / 06</span>
+      <div class="premium-service-icon">✧</div>
+      <h3>UI/UX Design</h3>
+      <p>Thoughtful interfaces and digital experiences designed with users in mind.</p>
+      <a class="service-arrow" href="#contact" aria-label="Enquire about UI UX Design">↗</a>
+    </article>
+
+    <article class="premium-service-card">
+      <span class="service-number">05 / 06</span>
+      <div class="premium-service-icon">↗</div>
+      <h3>SEO</h3>
+      <p>Search-friendly website structure and on-page optimization to improve discoverability.</p>
+      <a class="service-arrow" href="#contact" aria-label="Enquire about SEO">↗</a>
+    </article>
+
+    <article class="premium-service-card">
+      <span class="service-number">06 / 06</span>
+      <div class="premium-service-icon">▤</div>
+      <h3>E-commerce Websites</h3>
+      <p>Modern online storefronts with responsive layouts and convenient shopping experiences.</p>
+      <a class="service-arrow" href="#contact" aria-label="Enquire about E-commerce Websites">↗</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- STEP 19: PREMIUM PROJECT SHOWCASE -->
+<section class="projects-premium" id="projects">
+
+  <div class="projects-heading">
+    <span class="section-label">OUR PORTFOLIO</span>
+    <h2>Featured <span>Project</span></h2>
+    <p>
+      Explore a website demo developed as part of our
+      digital development portfolio.
+    </p>
+  </div>
+
+  <article class="project-showcase">
+
+    <!-- STYLIZED BROWSER PREVIEW -->
+    <div class="project-preview-wrap">
+      <div class="project-browser">
+
+        <div class="browser-top">
+          <div class="browser-dots" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+          <div class="browser-address">
+            revolution-science-academy
+          </div>
         </div>
 
-        <div class="floating-panel panel-web" aria-hidden="true">
-          <div class="panel-dots"><i></i><i></i><i></i></div>
-          <div class="web-picture"></div>
-          <div class="web-line"></div>
-          <div class="web-line small"></div>
-        </div>
-
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="camera"></div>
-            <div class="screen-inner">
-              <div class="screen-logo">W</div>
-              <strong>Webart<span>.io</span></strong>
-              <small>TURNING IDEAS INTO DIGITAL REALITY</small>
+        <div class="preview-content">
+          <div class="preview-nav">
+            <span class="preview-brand">REVOLUTION SCIENCE ACADEMY</span>
+            <div class="preview-nav-lines" aria-hidden="true">
+              <i></i><i></i><i></i>
             </div>
           </div>
-          <div class="laptop-base">
-            <div class="keyboard"></div>
-            <div class="trackpad"></div>
-          </div>
-        </div>
 
-        <div class="platform"></div>
-        <div class="art-glow"></div>
-      </div>
-    </section>
+          <span class="preview-hero-label">CREATING TOPPERS...</span>
 
-    <!-- FEATURE CARDS -->
-    <section class="features" aria-label="What we create">
-
-      <article class="feature-card">
-        <div class="feature-icon">◎</div>
-        <h3>Websites</h3>
-        <p>Modern, responsive websites for your business.</p>
-        <a href="#services" aria-label="Explore website services">↗</a>
-      </article>
-
-      <article class="feature-card">
-        <div class="feature-icon purple-icon">⌘</div>
-        <h3>Software</h3>
-        <p>Custom software built for your unique needs.</p>
-        <a href="#services" aria-label="Explore software services">↗</a>
-      </article>
-
-      <article class="feature-card">
-        <div class="feature-icon">▦</div>
-        <h3>Solutions</h3>
-        <p>Digital solutions to make your work easier.</p>
-        <a href="#services" aria-label="Explore digital solutions">↗</a>
-      </article>
-
-      <article class="feature-card">
-        <div class="feature-icon purple-icon">↗</div>
-        <h3>Growth</h3>
-        <p>Strategies that help your business grow online.</p>
-        <a href="#contact" aria-label="Contact us about growth">↗</a>
-      </article>
-    </section>
-
-    <!-- NEW PREMIUM ABOUT SECTION -->
-    <section class="about-premium" id="about">
-
-      <div class="about-heading">
-        <span class="section-label">WHO WE ARE</span>
-        <h2>About <span>Webart.io</span></h2>
-      </div>
-
-      <div class="about-layout">
-
-        <div class="about-glass">
-          <h3>We Turn Ideas Into <span>Digital Reality.</span></h3>
-
-          <p>
-            Webart.io is a remote-first digital solutions startup
-            founded in 2026.
+          <h3>Learn. Practice. <span>Achieve.</span></h3>
+       <p>
+            Foundation • Bridge Course • Science<br>
+            MHT-CET • IIT-JEE • NEET
           </p>
 
-          <p>
-            We build modern websites, innovative software and
-            digital experiences that help businesses establish
-            and grow their online presence.
-          </p>
+          <span class="preview-button">Admission Enquiry ↗</span>
 
-          <p>
-            Our approach combines creativity, modern technology
-            and thoughtful design to build practical digital solutions.
-          </p>
-
-          <div class="about-tags">
-            <span>Creative Design</span>
-            <span>Modern Technology</span>
-            <span>Digital Solutions</span>
-          </div>
-        </div>
-
-        <div class="about-visual" aria-hidden="true">
-          <div class="about-cube">
-            <span>W</span>
+          <div class="preview-bottom" aria-hidden="true">
+            <i></i><i></i><i></i>
           </div>
         </div>
 
       </div>
+    </div>
 
-      <h3 class="founders-heading">Meet Our Founders</h3>
+    <!-- PROJECT DETAILS -->
+    <div class="project-info">
 
-      <div class="founders-grid">
+      <span class="project-type">EDUCATIONAL WEBSITE DEMO</span>
 
-        <article class="founder-card">
-          <div class="founder-avatar" aria-hidden="true">KG</div>
-          <h4>Krushna Gaikwad</h4>
-          <p>CO-FOUNDER</p>
-        </article>
+      <h3>Revolution Science Academy</h3>
 
-        <article class="founder-card">
-          <div class="founder-avatar" aria-hidden="true">HK</div>
-          <h4>Harshad Konde</h4>
-          <p>CO-FOUNDER</p>
-        </article>
+      <p>
+        A responsive website demo created for an educational academy,
+        presenting its courses, results, gallery and admission
+        enquiry information in one digital experience.
+      </p>
 
+      <div class="project-tech">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
       </div>
 
-    </section>
+      <a
+        class="project-live-btn"
+        href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Live Demo <span>↗</span>
+       </a>
 
-    <!-- SERVICES -->
-    <section class="content-section" id="services">
-      <span class="section-label">WHAT WE DO</span>
-      <h2>Our Services</h2>
+      <p class="project-caption">
+        Portfolio project • Webart.io
+      </p>
 
-      <div class="service-grid">
-        <div>Website Development</div>
-        <div>Custom Software</div>
-        <div>Web Applications</div>
-        <div>UI/UX Design</div>
-        <div>SEO</div>
-        <div>E-commerce Websites</div>
-      </div>
-    </section>
+    </div>
 
-    <!-- PROJECT -->
-    <section class="content-section" id="projects">
-      <span class="section-label">OUR WORK</span>
-      <h2>Featured Project</h2>
+  </article>
 
-      <div class="project-card">
-        <h3>Revolution Science Academy</h3>
-        <p>Educational website demo.</p>
+</section>
 
-        <a class="btn secondary"
-           href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Live Demo ↗
-        </a>
-      </div>
-    </section>
+<!-- CONTACT SECTION -->
+<section class="content-section contact-section" id="contact">
+  <span class="section-label">LET'S CONNECT</span>
+  <h2>Have a project in mind?</h2>
+  <p>Let's turn your idea into digital reality.</p>
 
-    <!-- CONTACT -->
-    <section class="content-section contact-section" id="contact">
-      <span class="section-label">LET'S CONNECT</span>
-      <h2>Have a project in mind?</h2>
-      <p>Let's turn your idea into digital reality.</p>
+  <div class="contact-actions">
+    <a class="btn primary" href="mailto:Webart.io.Official@gmail.com">
+      Email Us ↗
+    </a>
 
-      <div class="contact-actions">
-        <a class="btn primary" href="mailto:Webart.io.Official@gmail.com">
-          Email Us ↗
-        </a>
+    <a
+      class="btn secondary"
+      href="https://www.instagram.com/webar_t.io/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram ↗
+    </a>
+  </div>
+</section>
 
-        <a class="btn secondary"
-           href="https://www.instagram.com/webar_t.io/"
-           target="_blank"
-           rel="noopener noreferrer">
-          Instagram ↗
-        </a>
-      </div>
-    </section>
+</main>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <strong>Webart.io</strong>
-    <p>Turning Ideas Into Digital Reality</p>
-    <small>© <span id="year">2026</span> Webart.io</small>
-  </footer>
-
+<!-- FOOTER -->
+<footer>
+  <strong>Webart.io</strong>
+  <p>Turning Ideas Into Digital Reality</p>
+  <small>© <span id="year">2026</span> Webart.io</small>
+</footer>
 </body>
 </html>
