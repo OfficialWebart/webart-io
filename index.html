@@ -11,22 +11,26 @@
 <script src="script.js" defer></script>
 
 <style>
-/* ABOUT */
+/* SHARED SECTION STYLES */
 .about-premium,.services-premium,.projects-premium,.contact-premium {
   max-width:1350px;
   margin:0 auto 90px;
   padding:65px 5%;
-  scroll-margin-top:35px;
+  scroll-margin-top:90px;
 }
+
 .about-heading,.services-heading,.projects-heading,.contact-heading {
   text-align:center;
   margin-bottom:42px;
 }
-.about-heading h2,.services-heading h2,.projects-heading h2,.contact-heading h2 {
+
+.about-heading h2,.services-heading h2,
+.projects-heading h2,.contact-heading h2 {
   margin:15px 0;
   font-size:clamp(34px,5vw,58px);
   letter-spacing:-1.5px;
 }
+
 .about-heading h2 span,.services-heading h2 span,
 .projects-heading h2 span,.contact-heading h2 span {
   background:linear-gradient(110deg,#00c6ff,#a64cff);
@@ -34,28 +38,40 @@
   background-clip:text;
   color:transparent;
 }
+
 .services-heading p,.projects-heading p,.contact-heading p {
   max-width:650px;
   margin:auto;
   color:#aab8d4;
   line-height:1.8;
 }
+
+/* ABOUT */
 .about-layout {
   display:grid;
   grid-template-columns:1.2fr 1fr;
   gap:25px;
 }
+
 .about-glass,.about-visual,.founder-card {
   border:1px solid #4775c266;
   border-radius:26px;
   background:linear-gradient(145deg,#122852aa,#080e29dd);
   box-shadow:inset 0 1px #ffffff20,0 20px 45px #0004;
 }
+
 .about-glass {padding:40px}
 .about-glass h3 {font-size:30px;margin-bottom:20px}
 .about-glass h3 span {color:#00b7ff}
 .about-glass p {color:#aab8d4;line-height:1.9;margin-bottom:15px}
-.about-tags,.project-tech {display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+
+.about-tags,.project-tech {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:25px;
+}
+
 .about-tags span,.project-tech span {
   padding:10px 14px;
   border:1px solid #315caa;
@@ -63,6 +79,7 @@
   color:#9cceff;
   font-size:12px;
 }
+
 .about-visual {
   min-height:340px;
   display:grid;
@@ -70,9 +87,12 @@
   background:radial-gradient(circle,#243c98aa,transparent 70%),#080d25;
   perspective:800px;
 }
+
 .about-cube {
-  width:155px;height:155px;
-  display:grid;place-items:center;
+  width:155px;
+  height:155px;
+  display:grid;
+  place-items:center;
   border:2px solid #479bff;
   border-radius:30px;
   background:linear-gradient(135deg,#006dff,#752bdf);
@@ -80,23 +100,47 @@
   transform:rotate(-12deg) rotateY(-15deg);
   animation:aboutFloat 5s ease-in-out infinite;
 }
-.about-cube span {font-size:95px;font-weight:900;font-style:italic}
+
+.about-cube span {
+  font-size:95px;
+  font-weight:900;
+  font-style:italic;
+}
+
 @keyframes aboutFloat {
-  50% {transform:translateY(-15px) rotate(-7deg) rotateY(-8deg)}
+  50% {
+    transform:translateY(-15px) rotate(-7deg) rotateY(-8deg);
+  }
 }
-.founders-heading {text-align:center;margin:65px 0 25px;font-size:27px}
+
+.founders-heading {
+  text-align:center;
+  margin:65px 0 25px;
+  font-size:27px;
+}
+
 .founders-grid {
-  max-width:900px;margin:auto;
-  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
+
 .founder-card {text-align:center;padding:30px}
+
 .founder-avatar {
-  display:grid;place-items:center;
-  width:68px;height:68px;margin:0 auto 18px;
+  display:grid;
+  place-items:center;
+  width:68px;
+  height:68px;
+  margin:0 auto 18px;
   border-radius:18px;
   background:linear-gradient(135deg,#00aaff,#913cff);
-  font-size:25px;font-weight:800;
+  font-size:25px;
+  font-weight:800;
 }
+
 .founder-card h4 {font-size:20px;margin-bottom:10px}
 .founder-card p {color:#8fc8ff;font-size:12px;letter-spacing:1px}
 
@@ -106,6 +150,7 @@
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:22px;
 }
+
 .premium-service-card {
   position:relative;
   min-height:300px;
@@ -116,36 +161,56 @@
   box-shadow:inset 0 1px #ffffff20,0 20px 35px #0004;
   transition:transform .4s,border-color .4s,box-shadow .4s;
 }
+
 .premium-service-card:hover {
   transform:translateY(-10px);
   border-color:#00b7ff;
   box-shadow:0 20px 50px #007bff33;
 }
+
 .service-number {
-  position:absolute;right:30px;top:30px;
-  color:#6489c2;font-size:12px;font-weight:800;
+  position:absolute;
+  right:30px;
+  top:30px;
+  color:#6489c2;
+  font-size:12px;
+  font-weight:800;
 }
+
 .premium-service-icon {
-  width:65px;height:65px;
-  display:grid;place-items:center;
+  width:65px;
+  height:65px;
+  display:grid;
+  place-items:center;
   margin-bottom:30px;
   border:1px solid #238aff77;
   border-radius:19px;
   background:linear-gradient(135deg,#123e83,#102052);
-  color:#62d5ff;font-size:30px;
+  color:#62d5ff;
+  font-size:30px;
   box-shadow:0 0 25px #007bff33;
 }
+
 .premium-service-card:nth-child(even) .premium-service-icon {
   color:#c09aff;
   background:linear-gradient(135deg,#432182,#191147);
 }
+
 .premium-service-card h3 {font-size:22px;margin-bottom:15px}
+
 .premium-service-card p {
-  color:#aab8d4;font-size:14px;line-height:1.8;padding-bottom:35px;
+  color:#aab8d4;
+  font-size:14px;
+  line-height:1.8;
+  padding-bottom:35px;
 }
+
 .service-arrow {
-  position:absolute;right:30px;bottom:28px;
-  color:#00b7ff;font-size:26px;
+  position:absolute;
+  right:30px;
+  bottom:28px;
+  color:#00b7ff;
+  font-size:26px;
 }
 
 /* PROJECT SHOWCASE */
@@ -160,7 +225,13 @@
   background:linear-gradient(135deg,#112654ee,#080e29f5);
   box-shadow:0 30px 65px #0005,inset 0 1px #ffffff25;
 }
-.project-preview-wrap {min-width:0;perspective:1000px;padding:12px}
+
+.project-preview-wrap {
+  min-width:0;
+  perspective:1000px;
+  padding:12px;
+}
+
 .project-browser {
   overflow:hidden;
   border:1px solid #5278c5;
@@ -170,111 +241,186 @@
   transform:rotateY(-7deg) rotateX(3deg);
   transition:transform .4s;
 }
-.project-showcase:hover .project-browser {transform:translateY(-5px)}
+
+.project-showcase:hover .project-browser {
+  transform:translateY(-5px);
+}
+
 .browser-top {
-  display:flex;align-items:center;gap:12px;
-  padding:13px;background:#142249;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px;
+  background:#142249;
 }
+
 .browser-dots {display:flex;gap:5px}
+
 .browser-dots i {
-  width:8px;height:8px;border-radius:50%;background:#ff6977;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#ff6977;
 }
+
 .browser-dots i:nth-child(2) {background:#ffca65}
 .browser-dots i:nth-child(3) {background:#55d9a0}
+
 .browser-address {
-  flex:1;min-width:0;padding:7px 12px;
-  border-radius:6px;background:#08132e;
-  color:#8fa9d3;font-size:10px;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  flex:1;
+  min-width:0;
+  padding:7px 12px;
+  border-radius:6px;
+  background:#08132e;
+  color:#8fa9d3;
+  font-size:10px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
+
 .preview-content {
-  min-height:290px;padding:25px;
+  min-height:290px;
+  padding:25px;
   background:radial-gradient(circle at 75% 15%,#266dba55,transparent 50%),#08102b;
 }
+
 .preview-nav {
-  display:flex;align-items:center;justify-content:space-between;
-  gap:10px;padding-bottom:35px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding-bottom:35px;
 }
+
 .preview-brand {font-size:12px;font-weight:800;color:white}
 .preview-nav-lines {display:flex;gap:7px}
+
 .preview-nav-lines i {
-  width:22px;height:4px;border-radius:4px;background:#4771b0;
+  width:22px;
+  height:4px;
+  border-radius:4px;
+  background:#4771b0;
 }
+
 .preview-hero-label {
-  display:inline-block;padding:7px 10px;
-  border:1px solid #347dc688;border-radius:20px;
-  color:#73c7ff;font-size:9px;letter-spacing:1px;
+  display:inline-block;
+  padding:7px 10px;
+  border:1px solid #347dc688;
+  border-radius:20px;
+  color:#73c7ff;
+  font-size:9px;
+  letter-spacing:1px;
 }
+
 .preview-content h3 {
   margin:17px 0 12px;
-  font-size:clamp(23px,3vw,37px);line-height:1.2;
+  font-size:clamp(23px,3vw,37px);
+  line-height:1.2;
 }
+
 .preview-content h3 span {color:#43baff}
 .preview-content p {color:#a8bbdb;font-size:11px;line-height:1.7}
+
 .preview-button {
-  display:inline-block;margin-top:22px;padding:10px 15px;
+  display:inline-block;
+  margin-top:22px;
+  padding:10px 15px;
   border-radius:7px;
   background:linear-gradient(110deg,#008dff,#7140ed);
-  color:white;font-size:10px;font-weight:700;
+  color:white;
+  font-size:10px;
+  font-weight:700;
 }
+
 .preview-bottom {display:flex;gap:8px;margin-top:26px}
+
 .preview-bottom i {
-  flex:1;height:32px;border:1px solid #4276c555;
-  border-radius:6px;background:#132a53;
+  flex:1;
+  height:32px;
+  border:1px solid #4276c555;
+  border-radius:6px;
+  background:#132a53;
 }
+
 .project-type {
-  display:inline-block;margin-bottom:20px;padding:9px 14px;
-  border:1px solid #3286df88;border-radius:30px;
-  color:#7ed2ff;font-size:11px;letter-spacing:1px;
+  display:inline-block;
+  margin-bottom:20px;
+  padding:9px 14px;
+  border:1px solid #3286df88;
+  border-radius:30px;
+  color:#7ed2ff;
+  font-size:11px;
+  letter-spacing:1px;
 }
-.project-info h3 {font-size:clamp(29px,3.4vw,44px);margin-bottom:20px}
+
+.project-info h3 {
+  font-size:clamp(29px,3.4vw,44px);
+  margin-bottom:20px;
+}
+
 .project-info>p {color:#aab8d4;line-height:1.9}
 .project-tech {margin-bottom:30px}
+
 .project-live-btn {
-  display:inline-flex;gap:14px;align-items:center;
-  padding:15px 22px;border-radius:11px;
+  display:inline-flex;
+  gap:14px;
+  align-items:center;
+  padding:15px 22px;
+  border-radius:11px;
   background:linear-gradient(110deg,#008fff,#7542ed);
-  color:white;text-decoration:none;font-weight:800;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
   box-shadow:0 8px 28px #087aff44;
 }
+
 .project-caption {margin-top:22px;font-size:12px}
 
-/* STEP 20: PREMIUM CONTACT SECTION */
+/* CONTACT */
 .contact-premium {
   position:relative;
   isolation:isolate;
 }
+
 .contact-premium::before {
   content:"";
   position:absolute;
   z-index:-1;
-  width:340px;height:340px;
-  right:0;top:100px;
+  width:340px;
+  height:340px;
+  right:0;
+  top:100px;
   border-radius:50%;
   background:#7134ff;
   opacity:.17;
   filter:blur(100px);
   pointer-events:none;
 }
+
 .contact-layout {
   display:grid;
   grid-template-columns:.85fr 1.15fr;
   gap:25px;
   align-items:start;
 }
+
 .contact-details,.contact-form-card {
   border:1px solid #4678bf88;
   border-radius:28px;
   background:linear-gradient(145deg,#112653ed,#080e29f5);
   box-shadow:inset 0 1px #ffffff22,0 25px 55px #0005;
 }
+
 .contact-details {padding:35px}
 .contact-details h3 {font-size:27px;margin-bottom:15px}
+
 .contact-details>p {
   color:#aab8d4;
   line-height:1.8;
   margin-bottom:30px;
 }
+
 .contact-method {
   display:flex;
   align-items:center;
@@ -284,17 +430,21 @@
   text-decoration:none;
   transition:transform .3s;
 }
+
 .contact-method:hover {transform:translateX(5px)}
+
 .contact-method-icon {
   flex:none;
   display:grid;
   place-items:center;
-  width:49px;height:49px;
+  width:49px;
+  height:49px;
   border-radius:14px;
   background:linear-gradient(135deg,#076cff,#803aff);
   color:white;
   font-size:22px;
 }
+
 .contact-method small {
   display:block;
   color:#8eabd6;
@@ -302,21 +452,83 @@
   margin-bottom:6px;
   letter-spacing:1px;
 }
+
 .contact-method strong {
   display:block;
   color:#eaf3ff;
   font-size:clamp(12px,1.3vw,15px);
   overflow-wrap:anywhere;
 }
+
+/* NEW: FOUNDERS INSIDE GET IN TOUCH */
+.contact-founders {
+  margin-top:30px;
+  padding-top:25px;
+  border-top:1px solid #5275aa55;
+}
+
+.contact-founders h4 {
+  margin-bottom:18px;
+  font-size:19px;
+  color:#fff;
+}
+
+.contact-founder {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:13px;
+  padding:15px;
+  border:1px solid #3d65a477;
+  border-radius:15px;
+  background:#0b1c3d;
+}
+
+.contact-founder-avatar {
+  flex:none;
+  display:grid;
+  place-items:center;
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  background:linear-gradient(135deg,#008fff,#873cff);
+  color:white;
+  font-size:15px;
+  font-weight:800;
+}
+
+.contact-founder strong {
+  display:block;
+  font-size:14px;
+  color:#f1f6ff;
+}
+
+.contact-founder small {
+  display:block;
+  margin-top:5px;
+  font-size:11px;
+  color:#8fc8ff;
+  letter-spacing:1px;
+}
+
 .contact-form-card {padding:35px}
 .contact-form-card h3 {font-size:26px;margin-bottom:9px}
-.form-intro {color:#aab8d4;font-size:14px;line-height:1.7;margin-bottom:28px}
+
+.form-intro {
+  color:#aab8d4;
+  font-size:14px;
+  line-height:1.7;
+  margin-bottom:28px;
+}
+
 .contact-form {display:grid;gap:20px}
+
 .form-two {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:17px;
 }
+
 .form-field label {
   display:block;
   margin-bottom:10px;
@@ -324,6 +536,7 @@
   font-size:13px;
   font-weight:700;
 }
+
 .form-field input,.form-field select,.form-field textarea {
   display:block;
   width:100%;
@@ -338,18 +551,23 @@
   font-size:14px;
   transition:border-color .25s,box-shadow .25s;
 }
+
 .form-field textarea {
   min-height:135px;
   resize:vertical;
 }
+
 .form-field input::placeholder,.form-field textarea::placeholder {
   color:#788db3;
 }
+
 .form-field input:focus,.form-field select:focus,.form-field textarea:focus {
   border-color:#19adff;
   box-shadow:0 0 0 3px #008cff25;
 }
+
 .form-field select option {background:#081631;color:white}
+
 .contact-submit {
   width:100%;
   padding:17px 20px;
@@ -364,28 +582,44 @@
   box-shadow:0 10px 30px #087aff44;
   transition:transform .3s,box-shadow .3s;
 }
+
 .contact-submit:hover {
   transform:translateY(-3px);
   box-shadow:0 15px 35px #087aff66;
 }
+
 .form-note {
   color:#91a7c9;
   font-size:12px;
   line-height:1.7;
 }
+
+/* RESPONSIVE */
 @media(max-width:950px) {
-  .premium-services-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
-  .project-showcase,.contact-layout {grid-template-columns:1fr}
-}
-@media(max-width:700px) {
-  .about-layout,.founders-grid,.premium-services-grid,.form-two {
+  .premium-services-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .project-showcase,.contact-layout {
     grid-template-columns:1fr;
   }
-  .about-premium,.services-premium,.projects-premium,.contact-premium {
+}
+
+@media(max-width:700px) {
+  .about-layout,.founders-grid,
+  .premium-services-grid,.form-two {
+    grid-template-columns:1fr;
+  }
+
+  .about-premium,.services-premium,
+  .projects-premium,.contact-premium {
     padding:45px 6%;
     margin-bottom:45px;
   }
-  .about-glass,.contact-details,.contact-form-card {padding:25px}
+
+  .about-glass,.contact-details,.contact-form-card {
+    padding:25px;
+  }
+
   .about-visual {min-height:270px}
   .premium-service-card {min-height:260px}
   .project-showcase {padding:22px;gap:30px}
@@ -394,9 +628,11 @@
   .preview-nav {padding-bottom:27px}
   .project-info h3 {font-size:30px}
 }
+
 @media(prefers-reduced-motion:reduce) {
   .about-cube {animation:none}
-  .premium-service-card,.project-browser,.contact-submit,.contact-method {
+  .premium-service-card,.project-browser,
+  .contact-submit,.contact-method {
     transition:none;
   }
 }
@@ -411,7 +647,9 @@
     <img src="webart_github_under_1mb.jpg" alt="Webart.io logo">
     <span>Webart<span class="blue">.io</span></span>
   </a>
+
   <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
   <nav class="nav-links" aria-label="Main navigation">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
@@ -419,30 +657,37 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <a class="nav-cta" href="#contact">Get Started ↗</a>
 </header>
 
 <main>
 
-<!-- HOMEPAGE -->
+<!-- HOMEPAGE: FOUR CARDS REMOVED -->
 <section class="hero" id="home">
+
   <div class="hero-copy">
     <div class="eyebrow">
       <span class="status-dot"></span>
       BUILDING DIGITAL SOLUTIONS
     </div>
+
     <h1>Turning Ideas Into <span>Digital Reality</span></h1>
+
     <p>
       We build modern websites, innovative software and digital
       solutions that help businesses grow.
     </p>
+
     <div class="hero-actions">
       <a href="#projects" class="btn primary">Explore Our Work →</a>
       <a href="#contact" class="btn secondary">Get in Touch</a>
     </div>
   </div>
 
+  <!-- EXISTING 3D LAPTOP -->
   <div class="hero-art" aria-label="Decorative futuristic laptop illustration">
+
     <div class="orbit orbit-one"></div>
     <div class="orbit orbit-two"></div>
 
@@ -470,95 +715,88 @@
           <small>TURNING IDEAS INTO DIGITAL REALITY</small>
         </div>
       </div>
+
       <div class="laptop-base">
         <div class="keyboard"></div>
         <div class="trackpad"></div>
       </div>
     </div>
+
     <div class="platform"></div>
     <div class="art-glow"></div>
-  </div>
-</section>
 
-<!-- FOUR FEATURE CARDS -->
-<section class="features" aria-label="What we create">
-  <article class="feature-card">
-    <div class="feature-icon">◎</div>
-    <h3>Websites</h3>
-    <p>Modern, responsive websites for your business.</p>
-    <a href="#services" aria-label="Explore website services">↗</a>
-  </article>
-  <article class="feature-card">
-    <div class="feature-icon purple-icon">⌘</div>
-    <h3>Software</h3>
-    <p>Custom software built for your unique needs.</p>
-    <a href="#services" aria-label="Explore software services">↗</a>
-  </article>
-  <article class="feature-card">
-    <div class="feature-icon">▦</div>
-    <h3>Solutions</h3>
-    <p>Digital solutions to make your work easier.</p>
-    <a href="#services" aria-label="Explore digital solutions">↗</a>
-  </article>
-  <article class="feature-card">
-    <div class="feature-icon purple-icon">↗</div>
-    <h3>Growth</h3>
-    <p>Strategies that help your business grow online.</p>
-    <a href="#contact" aria-label="Contact us about growth">↗</a>
-  </article>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about-premium" id="about">
+
   <div class="about-heading">
     <span class="section-label">WHO WE ARE</span>
     <h2>About <span>Webart.io</span></h2>
   </div>
+
   <div class="about-layout">
+
     <div class="about-glass">
       <h3>We Turn Ideas Into <span>Digital Reality.</span></h3>
+
       <p>Webart.io is a remote-first digital solutions startup founded in 2026.</p>
+
       <p>
         We build modern websites, innovative software and digital
         experiences that help businesses establish and grow their online presence.
       </p>
+
       <p>
         Our approach combines creativity, modern technology and thoughtful
         design to build practical digital solutions.
       </p>
+
       <div class="about-tags">
         <span>Creative Design</span>
         <span>Modern Technology</span>
         <span>Digital Solutions</span>
       </div>
     </div>
+
     <div class="about-visual" aria-hidden="true">
       <div class="about-cube"><span>W</span></div>
     </div>
+
   </div>
 
   <h3 class="founders-heading">Meet Our Founders</h3>
+
   <div class="founders-grid">
+
     <article class="founder-card">
       <div class="founder-avatar" aria-hidden="true">KG</div>
       <h4>Krushna Gaikwad</h4>
       <p>CO-FOUNDER</p>
     </article>
+
     <article class="founder-card">
       <div class="founder-avatar" aria-hidden="true">HK</div>
       <h4>Harshad Konde</h4>
       <p>CO-FOUNDER</p>
     </article>
+
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services-premium" id="services">
+
   <div class="services-heading">
     <span class="section-label">WHAT WE DO</span>
     <h2>Our <span>Services</span></h2>
-    <p>From your first idea to a finished digital experience, explore what Webart.io can build.</p>
+    <p>
+      From your first idea to a finished digital experience,
+      explore what Webart.io can build.
+    </p>
   </div>
+
   <div class="premium-services-grid">
 
     <article class="premium-service-card">
@@ -614,6 +852,7 @@
 
 <!-- PROJECT -->
 <section class="projects-premium" id="projects">
+
   <div class="projects-heading">
     <span class="section-label">OUR PORTFOLIO</span>
     <h2>Featured <span>Project</span></h2>
@@ -621,8 +860,10 @@
   </div>
 
   <article class="project-showcase">
+
     <div class="project-preview-wrap">
       <div class="project-browser">
+
         <div class="browser-top">
           <div class="browser-dots" aria-hidden="true">
             <i></i><i></i><i></i>
@@ -631,67 +872,103 @@
         </div>
 
         <div class="preview-content">
+
           <div class="preview-nav">
             <span class="preview-brand">REVOLUTION SCIENCE ACADEMY</span>
             <div class="preview-nav-lines" aria-hidden="true">
               <i></i><i></i><i></i>
             </div>
           </div>
+
           <span class="preview-hero-label">CREATING TOPPERS...</span>
+
           <h3>Learn. Practice. <span>Achieve.</span></h3>
-    <p>Foundation • Bridge Course • Science<br>MHT-CET • IIT-JEE • NEET</p>
+
+          <p>
+            Foundation • Bridge Course • Science<br>
+            MHT-CET • IIT-JEE • NEET
+          </p>
+
           <span class="preview-button">Admission Enquiry ↗</span>
+
           <div class="preview-bottom" aria-hidden="true">
             <i></i><i></i><i></i>
           </div>
+
         </div>
       </div>
     </div>
 
     <div class="project-info">
+
       <span class="project-type">EDUCATIONAL WEBSITE DEMO</span>
+
       <h3>Revolution Science Academy</h3>
+
       <p>
         A responsive website demo created for an educational academy,
         presenting its courses, results, gallery and admission enquiry
         information in one digital experience.
       </p>
+
       <div class="project-tech">
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
         <span>Responsive Design</span>
       </div>
+
       <a
         class="project-live-btn"
         href="https://krushnagaikwad6633-bit.github.io/revolution-science-academy/"
         target="_blank"
         rel="noopener noreferrer"
       >View Live Demo ↗</a>
+
       <p class="project-caption">Portfolio project • Webart.io</p>
+
     </div>
+
   </article>
 </section>
 
-<!-- STEP 20: CONTACT -->
+<!-- UPDATED CONTACT -->
 <section class="contact-premium" id="contact">
-  <div class="contact-heading">
+ <div class="contact-heading">
     <span class="section-label">LET'S CONNECT</span>
     <h2>Let's Build Something <span>Great.</span></h2>
+
     <p>
       Have a website, software or digital project in mind?
       Tell us about your idea and start a conversation with Webart.io.
     </p>
   </div>
+
   <div class="contact-layout">
 
     <aside class="contact-details">
+  <div class="contact-heading">
+    <span class="section-label">LET'S CONNECT</span>
+     <h2>Let's Build Something <span>Great.</span></h2>
+
+    <p>
+      Have a website, software or digital project in mind?
+      Tell us about your idea and start a conversation with Webart.io.
+    </p>
+  </div>
+
+  <div class="contact-layout">
+
+    <aside class="contact-details">
+
       <h3>Get in Touch</h3>
+
       <p>
-        We're a remote-first digital startup. Connect with us
-        using our official email or Instagram profile.
+        We're a remote-first digital startup.
+        Connect with us through our official email or Instagram.
       </p>
 
+      <!-- EMAIL -->
       <a class="contact-method" href="mailto:Webart.io.Official@gmail.com">
         <span class="contact-method-icon" aria-hidden="true">✉</span>
         <span>
@@ -699,47 +976,93 @@
           <strong>Webart.io.Official@gmail.com</strong>
         </span>
       </a>
-
+       <!-- INSTAGRAM -->
       <a
         class="contact-method"
         href="https://www.instagram.com/webar_t.io/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit Webart.io on Instagram"
       >
         <span class="contact-method-icon" aria-hidden="true">◎</span>
         <span>
-          <small>INSTAGRAM</small>
+          <small>OFFICIAL INSTAGRAM • OPEN PROFILE ↗</small>
           <strong>@webar_t.io</strong>
         </span>
       </a>
+
+      <!-- NEW CONTACT FOUNDERS -->
+      <div class="contact-founders">
+
+        <h4>Meet Our Founders</h4>
+
+        <div class="contact-founder">
+          <span class="contact-founder-avatar" aria-hidden="true">KG</span>
+          <span>
+            <strong>Krushna Gaikwad</strong>
+            <small>CO-FOUNDER</small>
+          </span>
+        </div>
+
+        <div class="contact-founder">
+          <span class="contact-founder-avatar"
+            <div class="contact-founder">
+          <span class="contact-founder-avatar" aria-hidden="true">HK</span>
+          <span>
+            <strong>Harshad Konde</strong>
+            <small>CO-FOUNDER</small>
+          </span>
+        </div>
+
+      </div>
+
     </aside>
 
+    <!-- ENQUIRY FORM -->
     <div class="contact-form-card">
+
       <h3>Start Your Project</h3>
-      <p class="form-intro">Fill in the details below to prepare an email enquiry.</p>
+         <p class="form-intro">
+        Fill in the details below to prepare an email enquiry.
+      </p>
 
       <form class="contact-form" id="projectEnquiry">
 
         <div class="form-two">
+
           <div class="form-field">
             <label for="clientName">Your Name *</label>
-            <input id="clientName" name="clientName" type="text"
-              autocomplete="name" placeholder="Enter your name"
-              maxlength="100" required>
+            <input
+              id="clientName"
+              name="clientName"
+              type="text"
+              autocomplete="name"
+              placeholder="Enter your name"
+              maxlength="100"
+              required
+            >
           </div>
-          <div class="form-field">
+            <div class="form-field">
             <label for="clientEmail">Email Address *</label>
-            <input id="clientEmail" name="clientEmail" type="email"
-              autocomplete="email" placeholder="Enter your email"
-              maxlength="150" required>
+            <input
+              id="clientEmail"
+              name="clientEmail"
+              type="email"
+              autocomplete="email"
+              placeholder="Enter your email"
+              maxlength="150"
+              required
+            >
           </div>
+
         </div>
 
         <div class="form-field">
           <label for="clientService">Service Required *</label>
+
           <select id="clientService" name="clientService" required>
             <option value="" disabled selected>Select a service</option>
-            <option>Website Development</option>
+              <option>Website Development</option>
             <option>Custom Software</option>
             <option>Web Applications</option>
             <option>UI/UX Design</option>
@@ -751,9 +1074,14 @@
 
         <div class="form-field">
           <label for="clientMessage">Project Details *</label>
-          <textarea id="clientMessage" name="clientMessage"
+
+          <textarea
+            id="clientMessage"
+            name="clientMessage"
             placeholder="Tell us a little about your project..."
-            maxlength="1500" required></textarea>
+            maxlength="1500"
+            required
+          ></textarea>
         </div>
 
         <button type="submit" class="contact-submit">
@@ -764,7 +1092,10 @@
           Your email app will open with your enquiry prepared.
           Review the message and tap Send in your email app.
         </p>
+
       </form>
+      </form>
+
     </div>
 
   </div>
@@ -772,6 +1103,7 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <strong>Webart.io</strong>
   <p>Turning Ideas Into Digital Reality</p>
@@ -780,38 +1112,36 @@
 
 <!-- EMAIL ENQUIRY LOGIC -->
 <script>
-document.getElementById("projectEnquiry").addEventListener("submit", function(event) {
+document.getElementById("projectEnquiry").addEventListener("submit",function(event) {
   event.preventDefault();
 
-  const name = document.getElementById("clientName").value.trim();
-  const email = document.getElementById("clientEmail").value.trim();
-  const service = document.getElementById("clientService").value;
-  const message = document.getElementById("clientMessage").value.trim();
-
-  if (!name || !email || !service || !message) {
+  const name=document.getElementById("clientName").value.trim();
+  const email=document.getElementById("clientEmail").value.trim();
+  const service=document.getElementById("clientService").value;
+  const message=document.getElementById("clientMessage").value.trim();
+  if(!name || !email || !service || !message) {
     alert("Please complete all required fields.");
     return;
   }
 
-  const subject = "Webart.io Project Enquiry - " + service;
+  const subject="Webart.io Project Enquiry - "+service;
 
-  const body =
-    "Hello Webart.io,\n\n" +
-    "I would like to enquire about a project.\n\n" +
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Service: " + service + "\n\n" +
-    "Project Details:\n" + message + "\n\n" +
+  const body=
+    "Hello Webart.io,\n\n"+
+    "I would like to enquire about a project.\n\n"+
+    "Name: "+name+"\n"+
+    "Email: "+email+"\n"+
+    "Service: "+service+"\n\n"+
+    "Project Details:\n"+message+"\n\n"+
     "Thank you.";
 
-  const mailto =
-    "mailto:Webart.io.Official@gmail.com" +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
-
-  window.location.href = mailto;
+  window.location.href=
+    "mailto:Webart.io.Official@gmail.com"+
+    "?subject="+encodeURIComponent(subject)+
+    "&body="+encodeURIComponent(body);
 });
 </script>
 
 </body>
 </html>
+      
